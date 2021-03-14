@@ -1,9 +1,11 @@
 #!/bin/bash
 
+set -e
 function add_dune_enter() {
   dir=/home/loongson/ltp/testcases/kernel/syscalls/$1
   for cfile in $dir/*.c; do
     if [[ -f $cfile ]];then
+      echo $cfile
       line=$(grep -n 'int main' $cfile | cut -d: -f 1)
       if [[ -z $line ]];then
         echo $cfile
@@ -16,8 +18,6 @@ function add_dune_enter() {
 
         # sed -n -e $line,"$next_line"p $cfile
         sed -i "$next_line i #ifdef DUNE\n if(dune_enter()){\n return 1;\n }\n#endif" $cfile
-
-        exit 0
       fi
     else
       echo "TODO : need special attension"
@@ -27,17 +27,7 @@ function add_dune_enter() {
 
 for i in ./*;do
   if [[ -d $i ]];then
-    is=true
-    for j in $i/*; do
-      if [[ $j == *"dune-"* ]];then
-        is=false
-        break
-      fi
-    done
-
-    if [[ "$is" = true ]]; then
-      add_dune_enter $i
-    fi
+    add_dune_enter $i
   fi
 done
 

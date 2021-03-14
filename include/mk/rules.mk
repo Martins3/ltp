@@ -28,7 +28,7 @@ ifdef VERBOSE
 	$(CC) $(LDFLAGS) $^ $(LTPLDLIBS) $(LDLIBS) -o $@
 else
 	if [[ -f /home/loongson/ltp/$(target_rel_dir)dune_$< ]];then\
-		$(CC) $(LDFLAGS) $^ $(LTPLDLIBS) $(subst -lltp, -lduneltp, $(LDLIBS))  /home/loongson/dune/dune/libdune.a -o "dune-$@"; \
+		$(CC) $(LDFLAGS) "dune_$^" $(LTPLDLIBS) $(subst -lltp, -lduneltp, $(LDLIBS))  /home/loongson/dune/dune/libdune.a -o "dune-$@"; \
 	fi
 
 	@$(CC) $(LDFLAGS) $^ $(LTPLDLIBS) $(LDLIBS) -o $@
