@@ -1286,15 +1286,9 @@ static int fork_testrun(void)
 
 	if (!test_pid) {
 #ifdef DUNE
-    printf("YES, it's a dune test\n");
     if(dune_enter()){
-      printf("Fuck, dune_enter failed\n");
-      return TFAIL;
-    }else{
-      printf("dune_enter successed\n");
+      return 1;
     }
-#else
-    printf("No, just normal test\n");
 #endif
 		SAFE_SIGNAL(SIGALRM, SIG_DFL);
 		SAFE_SIGNAL(SIGUSR1, SIG_DFL);

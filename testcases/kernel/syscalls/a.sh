@@ -11,11 +11,13 @@ function add_dune_enter() {
       else
         echo $cfile
         echo $line
-        let "next_line= $line + 1"
+        let "next_line= $line + 2"
         echo $next_line
 
-        sed -n -e $line,"$next_line"p $cfile
-        exit
+        # sed -n -e $line,"$next_line"p $cfile
+        sed -i "$next_line i #ifdef DUNE\n if(dune_enter()){\n return 1;\n }\n#endif" $cfile
+
+        exit 0
       fi
     else
       echo "TODO : need special attension"
