@@ -56,6 +56,13 @@ LIBSRCS		:= $(filter-out $(FILTER_OUT_LIBSRCS),$(LIBSRCS))
 
 LIBOBJS		:= $(LIBSRCS:.c=.o)
 
+ifeq ($(LIB),libltp.a)
+LIBOBJS   := $(notdir $(LIBOBJS))
+LIBOBJS_DUNE := $(filter-out tst_test.o ,$(LIBOBJS))
+LIBOBJS_DUNE := $(LIBOBJS_DUNE) dune_tst_test.o
+DUNE_LIB ?= libduneltp.a
+endif
+
 $(LIB): $(notdir $(LIBOBJS))
 	@if [ -z "$(strip $^)" ] ; then \
 		echo "Cowardly refusing to create empty archive"; \
@@ -69,6 +76,11 @@ else
 	@$(if $(AR),$(AR),ar) -rc "$@" $^
 	@echo "RANLIB $@"
 	@$(if $(RANLIB),$(RANLIB),ranlib) "$@"
+
+ifeq ($(LIB), libltp.a)
+	$(if $(AR),$(AR),ar) -rc $(DUNE_LIB) $(LIBOBJS_DUNE)
+	$(if $(RANLIB),$(RANLIB),ranlib) libduneltp.a
+endif
 endif
 
 include $(top_srcdir)/include/mk/generic_leaf_target.mk

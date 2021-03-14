@@ -1268,6 +1268,7 @@ void tst_set_timeout(int timeout)
 		heartbeat();
 }
 
+int dune_enter();
 static int fork_testrun(void)
 {
 	int status;
@@ -1284,6 +1285,17 @@ static int fork_testrun(void)
 		tst_brk(TBROK | TERRNO, "fork()");
 
 	if (!test_pid) {
+#ifdef DUNE
+    printf("YES, it's a dune test\n");
+    if(dune_enter()){
+      printf("Fuck, dune_enter failed\n");
+      return TFAIL;
+    }else{
+      printf("dune_enter successed\n");
+    }
+#else
+    printf("No, just normal test\n");
+#endif
 		SAFE_SIGNAL(SIGALRM, SIG_DFL);
 		SAFE_SIGNAL(SIGUSR1, SIG_DFL);
 		SAFE_SIGNAL(SIGINT, SIG_DFL);
