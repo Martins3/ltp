@@ -2,9 +2,24 @@
 
 function add_dune_enter() {
   dir=/home/loongson/ltp/testcases/kernel/syscalls/$1
-  for cfile in dir/*.c; do
+  for cfile in $dir/*.c; do
+    if [[ -f $cfile ]];then
+      line=$(grep -n 'int main' $cfile | cut -d: -f 1)
+      if [[ -z $line ]];then
+        echo $cfile
+        echo "old trandition ?"
+      else
+        echo $cfile
+        echo $line
+        let "next_line= $line + 1"
+        echo $next_line
 
-    
+        sed -n -e $line,"$next_line"p $cfile
+        exit
+      fi
+    else
+      echo "TODO : need special attension"
+    fi
   done
 }
 

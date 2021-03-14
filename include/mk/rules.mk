@@ -4,9 +4,9 @@ target_rel_dir := $(if $(cwd_rel_from_top),$(cwd_rel_from_top)/,)
 ifdef VERBOSE
 	$(CC) $(CPPFLAGS) $(CFLAGS) -c -o $@ $<
 else
-	# 路径在 kernel syscall 的进行一下判断吧
-	echo $(target_rel_dir)
-	# TODO 生成两份 .o 对于特殊的.c
+	if [[ $(target_rel_dir) == *"testcases/kernel/syscalls"* ]]; then \
+		$(CC) $(CPPFLAGS) $(CFLAGS) -DDUNE -c -o "dune_$@" $< ; \
+	fi
 	@$(CC) $(CPPFLAGS) $(CFLAGS) -c -o $@ $<
 	@echo CC $(target_rel_dir)$@
 endif
@@ -27,8 +27,15 @@ endif
 ifdef VERBOSE
 	$(CC) $(LDFLAGS) $^ $(LTPLDLIBS) $(LDLIBS) -o $@
 else
-	# TODO 对于 .o 进行判断
+	if [[ -f /home/loongson/ltp/$(target_rel_dir)dune_$< ]];then\
+		$(CC) $(LDFLAGS) $^ $(LTPLDLIBS) $(subst -lltp, -lduneltp, $(LDLIBS))  /home/loongson/dune/dune/libdune.a -o "dune-$@"; \
+	fi
+
 	@$(CC) $(LDFLAGS) $^ $(LTPLDLIBS) $(LDLIBS) -o $@
+
+	if [[ -f /home/loongson/ltp/$(target_rel_dir)dune_$< ]];then\
+		rm /home/loongson/ltp/$(target_rel_dir)dune_$<; \
+	fi
 	@echo LD $(target_rel_dir)$@
 endif
 
