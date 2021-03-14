@@ -13,11 +13,13 @@ function add_dune_enter() {
       else
         echo $cfile
         echo $line
+        i=0
         for line_num in $line;do
-          let "next_line= $line_num + 2"
+          let "next_line= $line_num + 2 + $i"
           echo $next_line
           # sed -n -e $line,"$next_line"p $cfile
           sed -i "$next_line i #ifdef DUNE\n if(dune_enter()){\n return 1;\n }\n#endif" $cfile
+          var=$((i+5))
         done
       fi
     else
@@ -25,6 +27,9 @@ function add_dune_enter() {
     fi
   done
 }
+
+add_dune_enter setgroups
+exit 0
 
 for i in ./*;do
   if [[ -d $i ]];then
