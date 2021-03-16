@@ -50,6 +50,16 @@ endif
 MAKE_TARGETS			?= $(notdir $(patsubst %.c,%,$(wildcard $(abs_srcdir)/*.c)))
 MAKE_TARGETS			:= $(filter-out $(FILTER_OUT_MAKE_TARGETS),$(MAKE_TARGETS))
 
+DUNE_MAKE_TARGETS := $(filter-out $(wildcard *.ko),$(MAKE_TARGETS))
+DUNE_MAKE_TARGETS	:= $(addprefix dune-, $(DUNE_MAKE_TARGETS))
+
+$(info ===== $(DUNE_MAKE_TARGETS))
+
+MAKE_TARGETS += $(DUNE_MAKE_TARGETS)
+
+$(info ===== $(MAKE_TARGETS))
+
+
 # with only *.dwo, .[0-9]+.dwo can not be cleaned
 CLEAN_TARGETS			+= $(MAKE_TARGETS) $(HOST_MAKE_TARGETS) *.o *.pyc .cache.mk *.dwo .*.dwo
 
@@ -82,6 +92,7 @@ INSTALL_MODE			?= 00775
 $(abspath $(addprefix $(DESTDIR)/$(INSTALL_DIR)/,$(sort $(dir $(INSTALL_TARGETS) $(MAKE_TARGETS))))):
 	mkdir -p "$@"
 $(foreach install_target,$(INSTALL_TARGETS),$(eval $(call generate_install_rule,$(install_target),$(abs_srcdir),$(INSTALL_DIR))))
+
 $(foreach make_target,$(MAKE_TARGETS),$(eval $(call generate_install_rule,$(make_target),$(abs_builddir),$(INSTALL_DIR))))
 
 else  # else ! $(filter-out install,$(MAKECMDGOALS)),$(MAKECMDGOALS)

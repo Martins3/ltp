@@ -54,7 +54,9 @@ else
 	@$(CC) $(CPPFLAGS) $(CFLAGS) $(LDFLAGS) $^ $(LTPLDLIBS) $(LDLIBS) -o $@
 
 	if [[ "$(LDLIBS)" == *"-lltp"* ]]; then \
-		$(CC) $(CPPFLAGS) $(CFLAGS) $(LDFLAGS) $^ $(LTPLDLIBS) $(subst -lltp, -lduneltp, $(LDLIBS))  /home/loongson/dune/dune/libdune.a -o "dune-$@"; \
+		if [[ ! "$(LDLIBS)" == *"-lltpuinput"* ]]; then \
+			$(CC) $(CPPFLAGS) $(CFLAGS) -DDUNE $(LDFLAGS) $^ $(LTPLDLIBS) $(subst -lltp, -lduneltp, $(LDLIBS))  /home/loongson/dune/dune/libdune.a -o "dune-$@"; \
+		fi \
 	fi
 
 	@echo CC $(target_rel_dir)$@
