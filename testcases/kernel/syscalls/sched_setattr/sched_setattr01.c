@@ -111,6 +111,11 @@ static void sched_setattr_verify(const struct test_case *test)
 
 int main(int argc, char **argv)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	pthread_t thread;
 	int lc;
 

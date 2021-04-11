@@ -69,6 +69,11 @@ char *mm1 = NULL, *mm2 = NULL;
 /*--------------------------------------------------------------------*/
 int main(void)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	char tmp1[] = "./tmp.file.1";
 	char tmp2[] = "./tmp.file.2";
 

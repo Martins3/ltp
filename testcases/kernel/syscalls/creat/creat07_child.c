@@ -10,6 +10,11 @@
 
 int main(void)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	tst_reinit();
 
 	TST_CHECKPOINT_WAKE(0);

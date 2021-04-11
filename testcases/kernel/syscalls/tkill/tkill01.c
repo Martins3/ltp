@@ -76,6 +76,11 @@ void sig_action(int sig)
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int tid;
 	int lc;
 

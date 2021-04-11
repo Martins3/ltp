@@ -66,6 +66,11 @@ static void setup(void)
 
 int main(int argc, char *argv[])
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc;
 
 	io_context_t ctx;
@@ -108,6 +113,11 @@ int main(int argc, char *argv[])
 #else
 int main(void)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	tst_brkm(TCONF, NULL, "test requires libaio and it's development packages");
 }
 #endif

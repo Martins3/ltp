@@ -60,6 +60,11 @@ static void cleanup(void);
 
 int main(int argc, char *argv[])
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc;
 	pid_t pid;
 	long maxrss_self, maxrss_children, delta;

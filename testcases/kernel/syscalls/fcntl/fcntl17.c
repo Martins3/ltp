@@ -433,6 +433,11 @@ void catch_alarm(void)
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int ans;
 	int lc;
 	int fail = 0;

@@ -68,6 +68,11 @@ struct mallinfo info;
 
 int main(int argc, char *argv[])
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	char *buf;
 
 	tst_parse_opts(argc, argv, NULL, NULL);
@@ -150,6 +155,11 @@ void printinfo(void)
 #else
 int main(void)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	tst_brkm(TCONF, NULL, "mallopt defined only for glibc");
 }
 #endif

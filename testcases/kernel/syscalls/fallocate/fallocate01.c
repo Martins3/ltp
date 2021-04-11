@@ -192,6 +192,11 @@ void populate_files(int fd)
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	loff_t expected_size;
 	int lc;
 

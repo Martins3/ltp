@@ -182,6 +182,11 @@ static int sig_array[NUMSIGS];
  ***********************************************************************/
 int main(int argc, char **argv)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc;
 
 	/* gcc -Wall complains about sig_caught not being ref'd because of the

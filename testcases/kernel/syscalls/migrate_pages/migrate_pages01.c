@@ -192,6 +192,11 @@ static void test_invalid_perm(void)
 
 int main(int argc, char *argv[])
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc;
 
 	tst_parse_opts(argc, argv, options, NULL);
@@ -247,6 +252,11 @@ static void cleanup(void)
 #else
 int main(void)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	tst_brkm(TCONF, NULL, NUMA_ERROR_MSG);
 }
 #endif

@@ -249,6 +249,11 @@ int npathdats, ngoods, nbads, nmnem;
 /*--------------------------------------------------------------*/
 int main(void)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	setup();		/* temp file is now open        */
 
 	npathdats = ARRAY_SIZE(pathdat);

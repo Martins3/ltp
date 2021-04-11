@@ -81,6 +81,11 @@ int TST_TOTAL = 1;
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc;
 	pid_t proc_id;		/* process id of the test process */
 	pid_t pid;		/* process id of the child process */

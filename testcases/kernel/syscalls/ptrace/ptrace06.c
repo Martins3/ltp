@@ -163,6 +163,11 @@ int TST_TOTAL = ARRAY_SIZE(test_cases);
 
 int main(int argc, char *argv[])
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	size_t i;
 	long ret;
 	int saved_errno;

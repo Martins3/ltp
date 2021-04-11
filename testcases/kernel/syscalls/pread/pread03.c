@@ -96,6 +96,11 @@ void init_buffers();		/* function to initialize/allocate buffers */
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc;
 	size_t nbytes;		/* no. of bytes to be written */
 	off_t offset;		/* offset position in the specified file */

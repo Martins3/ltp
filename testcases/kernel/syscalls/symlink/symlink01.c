@@ -517,6 +517,11 @@ option_t Options[] = {
  ***********************************************************************/
 int main(int argc, char *argv[])
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	struct tcses *tcs_ptr;
 	int lc;
 

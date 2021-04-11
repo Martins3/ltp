@@ -80,6 +80,11 @@ int TST_TOTAL = sizeof(tc) / sizeof(tc[0]);
 
 int main(int argc, char *argv[])
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc;
 	int i;
 	int exp_eno;
@@ -163,6 +168,11 @@ static void cleanup(void)
 #else /* HAVE_SYS_XATTR_H */
 int main(int argc, char *argv[])
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	tst_brkm(TCONF, NULL, "<sys/xattr.h> does not exist.");
 }
 #endif

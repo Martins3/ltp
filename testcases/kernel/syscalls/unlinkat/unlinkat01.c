@@ -70,6 +70,11 @@ int myunlinkat(int dirfd, const char *filename, int flags)
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc;
 	int i;
 

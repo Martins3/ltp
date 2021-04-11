@@ -37,6 +37,11 @@ void sig_handler(int signal);
 
 int main(int argc, char *argv[])
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int status, flag3, fd, ch, ch1;
 	int exit_flag = 0;	/* used for syslog test case 6. */
 	time_t t;

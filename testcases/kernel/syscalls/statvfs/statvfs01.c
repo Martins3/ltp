@@ -40,6 +40,11 @@ int TST_TOTAL = 1;
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	struct statvfs buf;
 	int lc;
 

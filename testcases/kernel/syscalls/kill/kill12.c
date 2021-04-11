@@ -73,6 +73,11 @@ int chflag;
 
 int main(int argc, char **argv)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int pid, npid;
 	int nsig, exno, nexno, status;
 	int ret_val = 0;

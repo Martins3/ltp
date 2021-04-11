@@ -120,6 +120,11 @@ static void test_profil(void)
 
 int main(int ac, char *av[])
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc;
 
 	tst_parse_opts(ac, av, NULL, NULL);
@@ -132,6 +137,11 @@ int main(int ac, char *av[])
 #else /* systems without profil() */
 int main(void)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
         tst_brkm(TCONF, NULL, "system doesn't have profil() support");
 }
 #endif

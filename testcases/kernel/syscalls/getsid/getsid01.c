@@ -72,6 +72,11 @@ pid_t p_sid;
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc;
 	pid_t pid, c_pid, c_sid;
 

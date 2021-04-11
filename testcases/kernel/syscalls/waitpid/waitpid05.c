@@ -75,6 +75,11 @@ static int sig_uclinux;
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int pid, npid, sig, nsig;
 	int exno, nexno, status;
 	int lc;

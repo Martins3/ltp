@@ -110,6 +110,11 @@ struct test_case_t {
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc, i;
 	struct utsname *buf;
 
@@ -294,6 +299,11 @@ void cleanup_test(int i)
 
 int main(void)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	tst_resm(TINFO, "test is not available on uClinux");
 	tst_exit();
 }

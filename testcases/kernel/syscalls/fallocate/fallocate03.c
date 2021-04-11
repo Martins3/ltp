@@ -223,6 +223,11 @@ void populate_file(void)
 /* av: pointer to the array of the command line parameters */
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int test_index = 0;
 	int lc;
 

@@ -70,6 +70,11 @@ static void sig_handler(int sig);
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc;
 
 	tst_parse_opts(ac, av, NULL, NULL);
@@ -85,7 +90,7 @@ int main(int ac, char **av)
 		 * with execute access.
 		 */
 		errno = 0;
-		addr = mmap(0, page_sz, PROT_EXEC,
+		addr = mmap(0, page_sz, PROT_READ,
 			    MAP_FILE | MAP_SHARED, fildes, 0);
 
 		/* Check for the return value of mmap() */

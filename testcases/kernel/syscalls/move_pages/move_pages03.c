@@ -106,6 +106,11 @@ void child(void **pages, sem_t * sem)
 
 int main(int argc, char **argv)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 
 	tst_parse_opts(argc, argv, NULL, NULL);
 

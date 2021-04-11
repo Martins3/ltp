@@ -95,6 +95,11 @@ void cleanup();
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	struct stat stat_buf;	/* stat struct. */
 	int lc;
 	mode_t dir_mode;	/* mode permissions set on testdirectory */

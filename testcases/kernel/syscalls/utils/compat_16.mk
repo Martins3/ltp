@@ -76,3 +76,4 @@ endif
 
 %_16.o: %.c $(COMPAT_16_H)
 	$(COMPILE.c) $(OUTPUT_OPTION) $<
+	$(COMPILE.c) -o dune_$@ $<

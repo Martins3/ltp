@@ -94,6 +94,11 @@ int TST_TOTAL = sizeof(testcases) / sizeof(testcases[0]);
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 
 	int lc, i;
 

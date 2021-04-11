@@ -64,6 +64,11 @@ int TST_TOTAL = ARRAY_SIZE(tc);
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc;
 	int i;
 
@@ -123,6 +128,11 @@ static void cleanup(void)
 #else /* HAVE_SYS_XATTR_H */
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	tst_brkm(TCONF, NULL, "<sys/xattr.h> does not exist.");
 }
 #endif

@@ -45,6 +45,11 @@ static int test_fd;
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc, dup_fd;
 
 	tst_parse_opts(ac, av, NULL, NULL);

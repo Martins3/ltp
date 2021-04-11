@@ -58,6 +58,11 @@ static void sig_handler(int sig);
 
 int main(int argc, char *argv[])
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc;
 	char *ch;
 

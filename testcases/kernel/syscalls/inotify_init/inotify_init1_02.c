@@ -118,6 +118,11 @@ void setup(void)
 
 int main(int argc, char *argv[])
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int fd, fl;
 	int lc;
 

@@ -67,6 +67,11 @@ static GID_T cmpset[NGROUPS];
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc;
 	GID_T group;
 	int i;

@@ -88,6 +88,11 @@ void cleanup();			/* cleanup function for the test */
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc;
 	GID_T real_gid,		/* real/eff./saved user id from getresgid() */
 	 eff_gid, sav_gid;

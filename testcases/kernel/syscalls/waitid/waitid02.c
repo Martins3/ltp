@@ -285,6 +285,11 @@ static void test_waitid(struct testcase_t *t)
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc, testno;
 
 	tst_parse_opts(ac, av, NULL, NULL);

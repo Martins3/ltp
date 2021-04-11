@@ -85,6 +85,11 @@ extern void rm_shm(int);
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc;
 	pid_t pid;
 	int exno, status, nsig, asig, ret;

@@ -62,6 +62,11 @@ void sighandler(int);
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc;
 
 	int pipefd[2];		/* fds for pipe read/write */

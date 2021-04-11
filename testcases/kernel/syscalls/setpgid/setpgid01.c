@@ -58,6 +58,11 @@ int TST_TOTAL = ARRAY_SIZE(testfunc);
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int i, lc;
 
 	tst_parse_opts(ac, av, NULL, NULL);

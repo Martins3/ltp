@@ -43,6 +43,11 @@ int TST_TOTAL = 1;
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int flags;
 	char fname[40];
 	int fd[10], fd2[10];

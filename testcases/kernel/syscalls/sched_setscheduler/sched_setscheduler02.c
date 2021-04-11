@@ -67,6 +67,11 @@ static uid_t nobody_uid;
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc;
 	pid_t pid;
 	struct sched_param param;

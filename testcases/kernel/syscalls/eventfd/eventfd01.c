@@ -667,6 +667,11 @@ static void overflow_read_test(int evfd)
 
 int main(int argc, char **argv)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc;
 	int fd;
 
@@ -735,6 +740,11 @@ static void cleanup(void)
 #else
 int main(void)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	tst_brkm(TCONF, NULL, "test requires libaio and it's development packages");
 }
 #endif

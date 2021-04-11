@@ -98,6 +98,11 @@ void cleanup();			/* cleanup function for the test */
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	struct stat stat_buf;	/* stat(2) struct contents */
 	int lc;
 	uid_t user_id;		/* Owner id of the test file. */

@@ -139,6 +139,11 @@ static void verify_cloexec(struct tcase *tc)
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc, i;
 
 	tst_parse_opts(ac, av, options, &help);

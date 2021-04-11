@@ -80,6 +80,11 @@ static char setgid_B[MSGSIZE], nosetgid_B[MSGSIZE], root_setgid_B[MSGSIZE];
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	struct stat buf;
 	struct group *group;
 	struct passwd *user1;

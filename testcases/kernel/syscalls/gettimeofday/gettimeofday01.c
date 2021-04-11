@@ -51,6 +51,11 @@ void setup(void);
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc;
 	int ret;
 
@@ -101,6 +106,11 @@ void cleanup(void)
 
 int main(void)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	tst_brkm(TCONF, "gettimeofday EFAULT check disabled on uClinux");
 }
 

@@ -58,6 +58,11 @@ static char fnamebuf[40];
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int status, pid, fildes;
 	char parchar[2];
 	char chilchar[2];

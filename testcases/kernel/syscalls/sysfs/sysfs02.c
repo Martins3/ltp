@@ -78,6 +78,11 @@ int TST_TOTAL = 1;
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc;
 	char buf[40];		/* 40 bytes suffice to store fs name */
 

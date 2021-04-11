@@ -62,6 +62,11 @@ static void help(void);
 
 int main(int argc, char **argv)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc, status;
 	int *bufsz_arr;
 

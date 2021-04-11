@@ -80,6 +80,11 @@ static struct perf_event_attr pe;
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int i, lc;
 
 	tst_parse_opts(ac, av, NULL, NULL);
@@ -203,6 +208,11 @@ static void cleanup(void)
 
 int main(void)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	tst_brkm(TCONF, NULL, "This system doesn't have "
 		 "header file:<linux/perf_event.h> or "
 		 "no struct perf_event_attr defined");

@@ -96,6 +96,11 @@ sigset_t sigset2;
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc;
 	pid_t my_pid;		/* test process id */
 

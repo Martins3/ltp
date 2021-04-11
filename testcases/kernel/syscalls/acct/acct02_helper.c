@@ -11,6 +11,11 @@
 
 int main(void)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	sleep(1);
 	return 128;
 }

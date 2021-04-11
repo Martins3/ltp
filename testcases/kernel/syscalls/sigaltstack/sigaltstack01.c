@@ -93,6 +93,11 @@ void sig_handler(int);		/* signal catching function */
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc;
 	void *alt_stk;		/* address of alternate stack for signal */
 

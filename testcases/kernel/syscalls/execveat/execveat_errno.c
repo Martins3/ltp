@@ -13,6 +13,11 @@
 
 int main(void)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	tst_reinit();
 	tst_res(TFAIL, "execveat() passes unexpectedly");
 	return 0;

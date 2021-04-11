@@ -54,6 +54,11 @@ static void cleanup(void);
 
 int main(void)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	char *buf;
 	int lc;
 

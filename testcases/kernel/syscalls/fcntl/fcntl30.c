@@ -43,6 +43,11 @@ static void cleanup(void);
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc;
 	int pipe_fds[2], test_fd;
 	int orig_pipe_size, new_pipe_size;

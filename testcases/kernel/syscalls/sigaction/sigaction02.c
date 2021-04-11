@@ -112,6 +112,11 @@ int set_handler(int sig, int sig_to_mask, int flag)
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int ret;
 
 	tst_parse_opts(ac, av, NULL, NULL);

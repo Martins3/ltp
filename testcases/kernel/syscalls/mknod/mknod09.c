@@ -81,6 +81,11 @@ void cleanup();			/* cleanup function for the test */
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc;
 	char *test_desc;	/* test specific error message */
 

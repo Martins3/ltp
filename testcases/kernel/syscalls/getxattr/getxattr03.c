@@ -59,6 +59,11 @@ int TST_TOTAL = 1;
 
 int main(int argc, char *argv[])
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc;
 
 	tst_parse_opts(argc, argv, NULL, NULL);
@@ -112,6 +117,11 @@ static void cleanup(void)
 #else /* HAVE_SYS_XATTR_H */
 int main(int argc, char *argv[])
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	tst_brkm(TCONF, NULL, "<sys/xattr.h> does not exist.");
 }
 #endif

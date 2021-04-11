@@ -127,6 +127,11 @@ cleanup:
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc, i;
 
 	tst_parse_opts(ac, av, NULL, NULL);

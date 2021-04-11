@@ -73,6 +73,11 @@ void cleanup(void);
 
 int main(int argc, char **argv)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc;
 	struct robust_list_head head;
 	size_t len_ptr;		/* size of structure struct robust_list_head */

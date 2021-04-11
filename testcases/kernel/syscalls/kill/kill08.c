@@ -73,6 +73,11 @@ int TST_TOTAL = 1;
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc;
 	pid_t pid1, pid2;
 	int exno, status, nsig, i;

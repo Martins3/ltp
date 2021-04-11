@@ -127,6 +127,11 @@ void timeout(int sig)
 
 int main(int argc, char **argv)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc;
 	struct sigaction sa;
 	int ret;

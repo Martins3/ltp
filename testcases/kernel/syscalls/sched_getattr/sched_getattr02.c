@@ -85,6 +85,11 @@ static void sched_getattr_verify(const struct test_case *test)
 
 int main(int argc, char **argv)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc, i;
 
 	tst_parse_opts(argc, argv, NULL, NULL);

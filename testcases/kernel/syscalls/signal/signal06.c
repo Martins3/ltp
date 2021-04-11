@@ -115,6 +115,11 @@ void *tfunc(void *arg LTP_ATTRIBUTE_UNUSED)
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int i, lc;
 	pthread_t pt;
 
@@ -168,6 +173,11 @@ int main(int ac, char **av)
 #else
 int main(void)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	tst_brkm(TCONF, NULL, "Only test on x86_64.");
 }
 #endif

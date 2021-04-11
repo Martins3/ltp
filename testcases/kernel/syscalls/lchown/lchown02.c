@@ -105,6 +105,11 @@ static struct passwd *ltpuser;
 
 int main(int argc, char *argv[])
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc;
 	uid_t user_id;
 	gid_t group_id;

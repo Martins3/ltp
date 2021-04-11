@@ -84,6 +84,11 @@ void cleanup();			/* cleanup function for the test */
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc;
 	int gidsetsize;		/* total no. of groups */
 	char *test_desc;	/* test specific error message */
@@ -135,6 +140,11 @@ int main(int ac, char **av)
 
 int main(void)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	tst_resm(TINFO, "test is not available on uClinux");
 	tst_exit();
 }

@@ -54,6 +54,11 @@ int TST_TOTAL = 1;
 
 int main(void)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int table_size, fd = 0, count = 0;
 	int max_val_opfiles;
 	struct rlimit rlp;

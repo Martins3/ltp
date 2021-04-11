@@ -59,6 +59,11 @@ int TST_TOTAL = 1;
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int fd0, fd1, fd2, rval;
 	char filename0[40], filename1[40];
 	char buf[40];

@@ -89,6 +89,11 @@ static const char *option_message[] = { "LINUX_REBOOT_CMD_CAD_ON",
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 
 	int lc, i;
 

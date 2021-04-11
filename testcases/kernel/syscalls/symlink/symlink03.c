@@ -140,6 +140,11 @@ void cleanup();
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc;
 	char *test_file;	/* testfile name */
 	char *sym_file;		/* symbolic link file name */

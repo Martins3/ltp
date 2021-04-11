@@ -70,6 +70,11 @@ static option_t options[] = {
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int status, forks, pid1;
 	int ch_r_stat;
 	FILE *rea, *writ;

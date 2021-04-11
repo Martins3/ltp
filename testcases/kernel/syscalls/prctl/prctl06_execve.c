@@ -11,6 +11,11 @@
 
 int main(int argc, char **argv)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	struct passwd *pw;
 	int proc_flag;
 

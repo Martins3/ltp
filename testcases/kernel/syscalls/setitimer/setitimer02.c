@@ -67,6 +67,11 @@ int TST_TOTAL = 1;
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc;
 	struct itimerval *value;
 
@@ -134,6 +139,11 @@ int main(int ac, char **av)
 
 int main(void)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	tst_resm(TINFO, "test is not available on uClinux");
 	tst_exit();
 }

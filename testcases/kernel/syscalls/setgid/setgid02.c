@@ -43,6 +43,11 @@ static void cleanup(void);
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	struct passwd *getpwnam(), *rootpwent;
 	int lc;
 

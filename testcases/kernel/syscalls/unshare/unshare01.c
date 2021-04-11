@@ -155,6 +155,11 @@ void setup(void)
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	pid_t pid1;
 	int lc;
 	int rval;
@@ -286,6 +291,11 @@ int main(int ac, char **av)
 #else
 int main(void)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	tst_brkm(TCONF, NULL, "unshare is undefined.");
 }
 #endif

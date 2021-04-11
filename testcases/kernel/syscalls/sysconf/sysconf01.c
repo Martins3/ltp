@@ -79,6 +79,11 @@ static void _test_sysconf(long name, const char *strname)
 
 int main(void)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	/* 1 - 5 */
 	test_sysconf(_SC_CLK_TCK);
 	test_sysconf(_SC_ARG_MAX);

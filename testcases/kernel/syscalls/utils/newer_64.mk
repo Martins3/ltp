@@ -53,3 +53,4 @@ endif
 
 %_64.o: %.c
 	$(COMPILE.c) $(OUTPUT_OPTION) $<
+	$(COMPILE.c) -o dune_$@ $<

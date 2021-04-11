@@ -49,6 +49,11 @@ static void setup(void);
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc;
 
 	tst_parse_opts(ac, av, NULL, NULL);
@@ -89,6 +94,11 @@ static void cleanup(void)
 
 int main(void)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	tst_brkm(TCONF,
 		 NULL, "modify_ldt is available but not tested on the platform than "
 		 "__i386__");
@@ -98,6 +108,11 @@ int main(void)
 
 int main(void)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	tst_resm(TINFO, "modify_ldt03 test only for ix86");
 	tst_exit();
 }

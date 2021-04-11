@@ -92,6 +92,11 @@ void *run_deadline(void *data LTP_ATTRIBUTE_UNUSED)
 
 int main(int argc, char **argv)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	pthread_t thread;
 	int lc;
 

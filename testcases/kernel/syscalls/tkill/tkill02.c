@@ -66,6 +66,11 @@ int TST_TOTAL = sizeof(test_cases) / sizeof(test_cases[0]);
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int i;
 
 	setup();

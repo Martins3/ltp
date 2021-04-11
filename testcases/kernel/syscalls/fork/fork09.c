@@ -64,6 +64,11 @@ static int mypid, nfiles;
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int pid, status, nf;
 
 	int lc;

@@ -55,6 +55,11 @@ static void fork12_sigs(int signum);
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int forks, pid1, fork_errno, waitstatus;
 	int ret, status;
 	int lc;

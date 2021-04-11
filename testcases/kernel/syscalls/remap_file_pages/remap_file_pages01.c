@@ -111,6 +111,11 @@ char fname[255];
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc;
 
 #if defined (__s390__) || (__s390x__) || (__ia64__)

@@ -92,6 +92,11 @@ struct test_case_t {
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc, i;
 
 	tst_parse_opts(ac, av, NULL, NULL);
@@ -131,6 +136,11 @@ int main(int ac, char **av)
 
 int main(void)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	tst_resm(TINFO, "test is not available on uClinux");
 	tst_exit();
 }

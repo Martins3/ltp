@@ -95,6 +95,11 @@ void cleanup();			/* Main cleanup function for the test */
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	struct stat stat_buf;	/* stat struct. */
 	int lc;
 	mode_t file_mode;	/* mode permissions set on testfile */

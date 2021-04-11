@@ -95,6 +95,11 @@ uid_t nobody_uid, bin_uid;
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc;
 	int rval;
 	pid_t pid, pid1;

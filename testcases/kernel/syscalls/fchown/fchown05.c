@@ -61,6 +61,11 @@ static int fildes;
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	struct stat stat_buf;
 	int i, lc;
 	uid_t user_id;

@@ -117,6 +117,11 @@ void cleanup();			/* cleanup function for the tests */
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc;
 	char *node_name;	/* ptr. for node name created */
 	char *test_desc;	/* test specific error message */

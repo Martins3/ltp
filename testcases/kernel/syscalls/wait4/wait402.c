@@ -49,6 +49,11 @@ static long get_pid_max(void)
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc;
 	pid_t epid = get_pid_max() + 1;
 

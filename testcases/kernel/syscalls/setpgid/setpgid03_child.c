@@ -23,6 +23,11 @@ char *TCID = "setpgid03_child";
 
 int main(void)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	TST_CHECKPOINT_INIT(NULL);
 
 	TST_SAFE_CHECKPOINT_WAKE(NULL, 0);

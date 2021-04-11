@@ -650,6 +650,11 @@ int run_test(int file_flag, int file_mode, int start, int end)
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 
 	int lc;
 

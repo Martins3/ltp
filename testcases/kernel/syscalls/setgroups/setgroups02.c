@@ -87,6 +87,11 @@ void cleanup();			/* cleanup function for the test */
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc, i;
 	int gidsetsize = 1;	/* only one GID, the GID of TESTUSER */
 	int PASS_FLAG = 0;	/* used for checking group array */

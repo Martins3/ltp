@@ -106,6 +106,11 @@ void cleanup();			/* cleanup function for the test */
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc;
 	pid_t cpid;		/* process id of the child process */
 	int exit_status;	/* exit status of child process */

@@ -69,6 +69,11 @@ int TST_TOTAL = 1;
 #ifdef USE_STUB
 int main(void)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	tst_brkm(TCONF, NULL, "System doesn't support execution of the test");
 }
 
@@ -260,6 +265,11 @@ out:
 
 int main(int argc, char **argv)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc;
 	int sfd;
 

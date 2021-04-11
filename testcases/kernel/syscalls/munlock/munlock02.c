@@ -97,6 +97,11 @@ NULL, 0, ENOMEM, "address range out of address space"},};
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc, i;
 
 	tst_parse_opts(ac, av, NULL, NULL);
@@ -182,6 +187,11 @@ void setup(void)
 
 int main(void)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	tst_resm(TINFO, "test is not available on uClinux");
 	tst_exit();
 }

@@ -104,6 +104,11 @@ struct test_case_t {		/* test case struct. to hold ref. test cond's */
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc;
 	int gidsetsize;		/* total no. of groups */
 	int i;

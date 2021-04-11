@@ -214,6 +214,11 @@ static void cleanup1(struct test_case_t *t)
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc, testno;
 
 	tst_parse_opts(ac, av, NULL, NULL);
@@ -244,6 +249,11 @@ static void cleanup(void)
 
 int main(void)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	tst_brkm(TCONF, NULL, "MREMAP_FIXED not present in <sys/mman.h>");
 }
 

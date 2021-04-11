@@ -79,6 +79,11 @@ int fstatat(int dirfd, const char *filename, struct stat *statbuf, int flags)
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc, i;
 #if !defined(HAVE_FSTATAT) && (__NR_fstatat64 > 0)
 	static struct stat64 statbuf;

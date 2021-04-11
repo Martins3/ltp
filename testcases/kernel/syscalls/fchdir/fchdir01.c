@@ -77,6 +77,11 @@ const char *TEST_DIR = "alpha";
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc;
 	void check_functionality(void);
 	int r_val;

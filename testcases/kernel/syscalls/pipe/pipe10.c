@@ -68,6 +68,11 @@ ssize_t do_read(int fd, void *buf, size_t count)
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc;
 
 	int fd[2];		/* fds for pipe read/write */

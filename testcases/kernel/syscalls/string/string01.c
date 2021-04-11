@@ -263,6 +263,11 @@ int anyfail(void)
 
 int main(int argc, char *argv[])
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	register int n, i;
 	char *s, *pr;
 

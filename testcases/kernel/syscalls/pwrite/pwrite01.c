@@ -101,6 +101,11 @@ void check_file_contents();	/* function to verify the contents of file */
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc;
 	int nwrite;		/* no. of bytes written by pwrite() */
 

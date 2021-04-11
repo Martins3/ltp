@@ -56,6 +56,11 @@ void display_status(siginfo_t * infop)
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	id_t pid;
 	siginfo_t infop;
 	int lc;

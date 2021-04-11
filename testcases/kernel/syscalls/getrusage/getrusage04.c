@@ -81,6 +81,11 @@ static void cleanup(void);
 
 int main(int argc, char *argv[])
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	struct rusage usage;
 	unsigned long ulast, udelta, slast, sdelta;
 	int i, lc;

@@ -109,6 +109,11 @@ struct test_case_t {		/* test case struct. to hold diff. test.conds */
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc;
 	char *test_desc;	/* test specific error message */
 	int ind;		/* counter to test different test conditions */

@@ -63,6 +63,8 @@ static void do_test(void)
 	pthread_t pth[4];
 
 	for (i = 0; i < LOOPS; i++) {
+    if(i % 100 == 0)
+    printf("[%d]\n", i);
 		key = add_key("user", "ltptestkey", "foo", 3,
 			KEY_SPEC_PROCESS_KEYRING);
 		if (key == -1)

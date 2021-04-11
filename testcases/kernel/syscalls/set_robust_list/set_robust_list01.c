@@ -75,6 +75,11 @@ void cleanup(void);
 
 int main(int argc, char **argv)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 #ifdef __NR_set_robust_list
 	int lc;
 #endif

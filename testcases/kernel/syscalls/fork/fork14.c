@@ -54,6 +54,11 @@ static int  fork_test(void);
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc, reproduced;
 
 	tst_parse_opts(ac, av, NULL, NULL);

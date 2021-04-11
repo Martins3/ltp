@@ -688,6 +688,11 @@ int test_epoll_ctl(int epoll_fd)
 
 int main(void)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int epoll_fd;
 	struct timeval tv;
 	int last_result;
@@ -733,6 +738,11 @@ int main(void)
 
 int main(void)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	tst_brkm(TCONF, NULL, "No epoll support found.");
 }
 

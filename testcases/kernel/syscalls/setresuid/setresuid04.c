@@ -69,6 +69,11 @@ void do_master_child();
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	pid_t pid;
 
 	tst_parse_opts(ac, av, NULL, NULL);

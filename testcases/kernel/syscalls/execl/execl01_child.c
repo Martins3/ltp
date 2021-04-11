@@ -9,6 +9,12 @@
 
 int main(int argc, char *argv[])
 {
+#ifdef DUNE
+  printf("before enter dune\n");
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	tst_reinit();
 
 	if (argc != 2)

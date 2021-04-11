@@ -109,6 +109,11 @@ static void usage(char const *prg)
 
 int main(int argc, char **argv)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int c, fd1, fd2, status;
 	pid_t cpid_poster, cpid_waiter;
 

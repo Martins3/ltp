@@ -117,6 +117,11 @@ static void decode_regs(struct pt_regs *pt)
 
 int main(int argc, char *argv[])
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	struct pt_regs pt_regs;
 	long ret;
 	int status;

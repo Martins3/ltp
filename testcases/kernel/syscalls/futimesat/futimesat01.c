@@ -63,6 +63,11 @@ int myfutimesat(int dirfd, const char *filename, struct timeval *times)
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc, i;
 	struct timeval times[2];
 

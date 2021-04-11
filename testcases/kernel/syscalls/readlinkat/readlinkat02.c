@@ -63,6 +63,11 @@ static void readlinkat_verify(const struct test_case_t *);
 
 int main(int argc, char **argv)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int i, lc;
 
 	tst_parse_opts(argc, argv, NULL, NULL);

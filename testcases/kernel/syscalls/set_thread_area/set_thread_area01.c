@@ -65,6 +65,11 @@ static struct test tests[] = {
 
 int main(int argc, char *argv[])
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc;
 	unsigned i;
 
@@ -105,6 +110,11 @@ int main(int argc, char *argv[])
 #else
 int main(void)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	tst_brkm(TCONF, NULL,
 		 "set_thread_area isn't available for this architecture");
 }

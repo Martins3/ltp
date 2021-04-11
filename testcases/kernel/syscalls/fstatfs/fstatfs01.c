@@ -68,6 +68,11 @@ int TST_TOTAL = ARRAY_SIZE(tcases);
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc, i;
 	struct statfs stats;
 

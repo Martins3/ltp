@@ -120,6 +120,11 @@ void setup(void)
 
 int main(int argc, char *argv[])
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	sigset_t ss;
 	int fd, fl;
 	int lc;

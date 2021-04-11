@@ -269,6 +269,11 @@ void parent_environment(void)
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc;
 	int kid_status;
 	int wait_status;

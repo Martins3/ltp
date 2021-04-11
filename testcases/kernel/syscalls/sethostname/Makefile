@@ -11,11 +11,24 @@ CPPFLAGS += -DTEST_SETHOSTNAME
 sethostname01: $(abs_srcdir)/../setdomainname/setdomainname01.c
 	$(LINK.c) $^ $(LOADLIBES) $(LDLIBS) $(OUTPUT_OPTION)
 
+	if [[ "$(LDLIBS)" == *"-lltp"* ]]; then \
+			$(LINK.c) -pthread $^ $(LOADLIBES) $(subst -lltp, -lduneltp, $(LDLIBS))  /home/loongson/dune/dune/libdune.a -o "dune-$@"; \
+	fi
+
 sethostname02: $(abs_srcdir)/../setdomainname/setdomainname02.c
 	$(LINK.c) $^ $(LOADLIBES) $(LDLIBS) $(OUTPUT_OPTION)
 
+	if [[ "$(LDLIBS)" == *"-lltp"* ]]; then \
+			$(LINK.c) -pthread $^ $(LOADLIBES) $(subst -lltp, -lduneltp, $(LDLIBS))  /home/loongson/dune/dune/libdune.a -o "dune-$@"; \
+	fi
+
+
 sethostname03: $(abs_srcdir)/../setdomainname/setdomainname03.c
 	$(LINK.c) $^ $(LOADLIBES) $(LDLIBS) $(OUTPUT_OPTION)
+
+	if [[ "$(LDLIBS)" == *"-lltp"* ]]; then \
+			$(LINK.c) -pthread $^ $(LOADLIBES) $(subst -lltp, -lduneltp, $(LDLIBS))  /home/loongson/dune/dune/libdune.a -o "dune-$@"; \
+	fi
 
 MAKE_TARGETS := sethostname01 sethostname02 sethostname03
 

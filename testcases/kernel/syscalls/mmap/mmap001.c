@@ -80,6 +80,11 @@ option_t options[] = {
 
 int main(int argc, char *argv[])
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	char *array;
 	int i, lc;
 	int fd;

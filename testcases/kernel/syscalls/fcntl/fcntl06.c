@@ -71,6 +71,11 @@ int do_lock(int, short, short, int, int);
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int fail = 0;
 
 	tst_parse_opts(ac, av, NULL, NULL);

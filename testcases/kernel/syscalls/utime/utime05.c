@@ -102,6 +102,11 @@ void cleanup();			/* cleanup function for the test */
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	struct stat stat_buf;	/* struct buffer to hold file info. */
 	int lc;
 	time_t modf_time, access_time;

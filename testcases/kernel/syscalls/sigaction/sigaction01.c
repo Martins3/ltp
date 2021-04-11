@@ -227,6 +227,11 @@ void cleanup(void)
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc;
 	int i;
 	int test_flags[] = { SA_RESETHAND | SA_SIGINFO, SA_RESETHAND,

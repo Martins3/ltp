@@ -100,6 +100,11 @@ void compare_bufers();		/* function to compare o/p of pread/pwrite */
 
 int main(int ac, char **av)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int lc;
 	int nread;		/* no. of bytes read by pread() */
 

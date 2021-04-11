@@ -74,6 +74,11 @@ void clearbuf(void)
 
 int main(int argc, char *argv[])
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	int fd, ret_val;
 	FILE *fp;
 
@@ -246,6 +251,11 @@ int blexit(void)
 
 int main(void)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	tst_brkm(TCONF, NULL, "test is not available on uClibc");
 }
 

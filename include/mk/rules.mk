@@ -5,7 +5,7 @@ ifdef VERBOSE
 	$(CC) $(CPPFLAGS) $(CFLAGS) -c -o $@ $<
 else
 	if [[ $(target_rel_dir) == *"testcases/kernel/syscalls"* ]]; then \
-		$(CC) $(CPPFLAGS) $(CFLAGS) -DDUNE -c -o "dune_$@" $< ; \
+		$(CC) $(CPPFLAGS) $(CFLAGS) -DDUNE -pthread -c -o "dune_$@" $< ; \
 	fi
 	@$(CC) $(CPPFLAGS) $(CFLAGS) -c -o $@ $<
 	@echo CC $(target_rel_dir)$@
@@ -13,7 +13,7 @@ endif
 
 tst_test.o:tst_test.c
 	@echo "tst_test is SPECIAL"
-	@$(CC) $(CPPFLAGS) $(CFLAGS) -DDUNE -c -o "dune_$@" $<
+	@$(CC) $(CPPFLAGS) $(CFLAGS) -DDUNE -pthread -c -o "dune_$@" $<
 	@$(CC) $(CPPFLAGS) $(CFLAGS) -c -o $@ $<
 	@echo CC $(target_rel_dir)$@
 
@@ -28,7 +28,7 @@ ifdef VERBOSE
 	$(CC) $(LDFLAGS) $^ $(LTPLDLIBS) $(LDLIBS) -o $@
 else
 	if [[ -f /home/loongson/ltp/$(target_rel_dir)dune_$< ]];then\
-		$(CC) $(LDFLAGS) "dune_$^" $(LTPLDLIBS) $(subst -lltp, -lduneltp, $(LDLIBS))  /home/loongson/dune/dune/libdune.a -o "dune-$@"; \
+		$(CC) $(LDFLAGS) -pthread "dune_$^" $(LTPLDLIBS) $(subst -lltp, -lduneltp, $(LDLIBS))  /home/loongson/dune/dune/libdune.a -o "dune-$@"; \
 	fi
 
 	@$(CC) $(LDFLAGS) $^ $(LTPLDLIBS) $(LDLIBS) -o $@
@@ -55,7 +55,7 @@ else
 
 	if [[ "$(LDLIBS)" == *"-lltp"* ]]; then \
 		if [[ ! "$(LDLIBS)" == *"-lltpuinput"* ]]; then \
-			$(CC) $(CPPFLAGS) $(CFLAGS) -DDUNE $(LDFLAGS) $^ $(LTPLDLIBS) $(subst -lltp, -lduneltp, $(LDLIBS))  /home/loongson/dune/dune/libdune.a -o "dune-$@"; \
+			$(CC) $(CPPFLAGS) $(CFLAGS) -DDUNE -pthread $(LDFLAGS) $^ $(LTPLDLIBS) $(subst -lltp, -lduneltp, $(LDLIBS))  /home/loongson/dune/dune/libdune.a -o "dune-$@"; \
 		fi \
 	fi
 

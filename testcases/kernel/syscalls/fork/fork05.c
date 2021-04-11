@@ -138,6 +138,11 @@ static void modify_ldt(int func, struct modify_ldt_ldt_s *ptr, int bytecount)
 
 int main(void)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	struct modify_ldt_ldt_s ldt0;
 	int lo;
 	pid_t pid;
@@ -191,6 +196,11 @@ int main(void)
 
 int main(void)
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	tst_resm(TINFO, "%%fs test only for ix86");
 
 	/*

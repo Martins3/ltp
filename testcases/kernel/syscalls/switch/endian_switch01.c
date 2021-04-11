@@ -99,6 +99,11 @@ static struct tst_test test = {
 
 int main4(int argc, char **argv, LTP_ATTRIBUTE_UNUSED char **envp,
 	unsigned long *auxv)
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 {
 	for (; *auxv != AT_NULL && *auxv != AT_HWCAP; auxv += 2)
 		;

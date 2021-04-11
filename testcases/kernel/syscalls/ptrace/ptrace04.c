@@ -99,6 +99,11 @@ void compare_registers(unsigned char poison)
 
 int main(int argc, char *argv[])
 {
+#ifdef DUNE
+ if(dune_enter()){
+ return 1;
+ }
+#endif
 	tst_parse_opts(argc, argv, NULL, NULL);
 
 	if (ARRAY_SIZE(regs) == 0)
