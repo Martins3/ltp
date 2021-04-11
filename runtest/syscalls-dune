@@ -1,0 +1,1716 @@
+##DESCRIPTION:Kernel dune-system calls
+#abort01 dune-abort01 
+#
+#accept01 dune-accept01 
+#accept02 dune-accept02 
+#
+#accept4_01 dune-accept4_01 
+#
+#access01 dune-access01 
+#access02 dune-access02 
+#access03 dune-access03 
+#access04 dune-access04 
+#
+#acct01 dune-acct01 
+#acct02 dune-acct02 
+#
+#add_key01 dune-add_key01 
+#add_key02 dune-add_key02 
+#add_key03 dune-add_key03 
+#add_key04 dune-add_key04 
+#add_key05 dune-add_key05 
+#
+#adjtimex01 dune-adjtimex01 
+#adjtimex02 dune-adjtimex02 
+#adjtimex03 dune-adjtimex03 
+#
+#alarm02 dune-alarm02 
+#alarm03 dune-alarm03 
+#alarm05 dune-alarm05 
+#alarm06 dune-alarm06 
+#alarm07 dune-alarm07 
+#
+#bind01 dune-bind01 
+#bind02 dune-bind02 
+#bind03 dune-bind03 
+#bind04 dune-bind04 
+#bind05 dune-bind05 
+#bind06 dune-bind06 
+#
+#bpf_map01 dune-bpf_map01 
+#bpf_prog01 dune-bpf_prog01 
+#bpf_prog02 dune-bpf_prog02 
+#bpf_prog03 dune-bpf_prog03 
+#bpf_prog04 dune-bpf_prog04 
+#
+#brk01 dune-brk01 
+#
+#capget01 dune-capget01 
+#capget02 dune-capget02 
+#
+#capset01 dune-capset01 
+#capset02 dune-capset02 
+#capset03 dune-capset03 
+#capset04 dune-capset04 
+#
+#cacheflush01 dune-cacheflush01 
+#
+#chdir01 dune-chdir01 
+#chdir01A dune-symlink01 -T chdir01
+#chdir04 dune-chdir04 
+#
+#chmod01 dune-chmod01 
+#chmod01A dune-symlink01 -T chmod01
+#chmod02 dune-chmod02 
+#chmod03 dune-chmod03 
+#chmod04 dune-chmod04 
+#chmod05 dune-chmod05 
+#chmod06 dune-chmod06 
+#chmod07 dune-chmod07 
+#
+#chown01 dune-chown01 
+#chown01_16 dune-chown01_16 
+#chown02 dune-chown02 
+#chown02_16 dune-chown02_16 
+#chown03 dune-chown03 
+#chown03_16 dune-chown03_16 
+#chown04 dune-chown04 
+#chown04_16 dune-chown04_16 
+#chown05 dune-chown05 
+#chown05_16 dune-chown05_16 
+#
+#chroot01 dune-chroot01 
+#chroot02 dune-chroot02 
+#chroot03 dune-chroot03 
+#chroot04 dune-chroot04 
+#
+#clock_adjtime01 dune-clock_adjtime01 
+#clock_adjtime02 dune-clock_adjtime02 
+#
+#clock_getres01 dune-clock_getres01 
+#clock_nanosleep01 dune-clock_nanosleep01 
+#clock_nanosleep02 dune-clock_nanosleep02 
+#clock_nanosleep03 dune-clock_nanosleep03 
+#clock_nanosleep04 dune-clock_nanosleep04 
+#
+#clock_gettime01 dune-clock_gettime01 
+#clock_gettime02 dune-clock_gettime02 
+#clock_gettime03 dune-clock_gettime03 
+#clock_gettime04 dune-clock_gettime04 
+#leapsec01 dune-leapsec01 
+#
+#clock_settime01 dune-clock_settime01 
+#clock_settime02 dune-clock_settime02 
+#clock_settime03 dune-clock_settime03 
+#
+#clone01 dune-clone01 
+#clone02 dune-clone02 
+#clone03 dune-clone03 
+#clone04 dune-clone04 
+#clone05 dune-clone05 
+#clone06 dune-clone06 
+#clone07 dune-clone07 
+#clone08 dune-clone08 
+#clone09 dune-clone09 
+#
+#clone301 dune-clone301 
+#clone302 dune-clone302 
+#
+#close01 dune-close01 
+#close02 dune-close02 
+#close08 dune-close08 
+#
+#confstr01 dune-confstr01 
+#
+#connect01 dune-connect01 
+#connect02 dune-connect02 
+#
+#creat01 dune-creat01 
+#creat03 dune-creat03 
+#creat04 dune-creat04 
+#creat05 dune-creat05 
+#creat06 dune-creat06 
+#creat07 dune-creat07 
+#creat08 dune-creat08 
+#
+#delete_module01 dune-delete_module01 
+#delete_module02 dune-delete_module02 
+#delete_module03 dune-delete_module03 
+#
+#dup01 dune-dup01 
+#dup02 dune-dup02 
+#dup03 dune-dup03 
+#dup04 dune-dup04 
+#dup05 dune-dup05 
+#dup06 dune-dup06 
+#dup07 dune-dup07 
+#
+#dup201 dune-dup201 
+#dup202 dune-dup202 
+#dup203 dune-dup203 
+#dup204 dune-dup204 
+#dup205 dune-dup205 
+#
+#dup3_01 dune-dup3_01 
+#dup3_02 dune-dup3_02 
+#
+#epoll_create1_01 dune-epoll_create1_01 
+## epoll01 dune-epoll-ltp
+#epoll_ctl01 dune-epoll_ctl01 
+#epoll_ctl02 dune-epoll_ctl02 
+#epoll_wait01 dune-epoll_wait01 
+#epoll_wait02 dune-epoll_wait02 
+#epoll_wait03 dune-epoll_wait03 
+#epoll_pwait01 dune-epoll_pwait01 
+#
+#eventfd01 dune-eventfd01 
+#
+#eventfd2_01 dune-eventfd2_01 
+#eventfd2_02 dune-eventfd2_02 
+#eventfd2_03 dune-eventfd2_03 
+#
+#execl01 dune-execl01 
+#execle01 dune-execle01 
+#execlp01 dune-execlp01 
+#
+#execv01 dune-execv01 
+#execve01 dune-execve01 
+#execve02 dune-execve02 
+#execve03 dune-execve03 
+#execve04 dune-execve04 
+#execve05 dune-execve05 -i 5 -n 32
+#execvp01 dune-execvp01 
+#execveat01 dune-execveat01 
+#execveat02 dune-execveat02 
+#execveat03 dune-execveat03 
+#
+#exit01 dune-exit01 
+#exit02 dune-exit02 
+#
+#exit_group01 dune-exit_group01 
+#
+##faccessat dune-test cases
+#faccessat01 dune-faccessat01 
+#
+##fallocate dune-test cases
+#fallocate01 dune-fallocate01 
+#fallocate02 dune-fallocate02 
+#fallocate03 dune-fallocate03 
+#fallocate04 dune-fallocate04 
+#fallocate05 dune-fallocate05 
+#fallocate06 dune-fallocate06 
+#
+#fsetxattr01 dune-fsetxattr01 
+#fsetxattr02 dune-fsetxattr02 
+#
+##posix_fadvise dune-test cases
+#posix_fadvise01 dune-posix_fadvise01 
+#posix_fadvise01_64 dune-posix_fadvise01_64 
+#posix_fadvise02 dune-posix_fadvise02 
+#posix_fadvise02_64 dune-posix_fadvise02_64 
+#posix_fadvise03 dune-posix_fadvise03 
+#posix_fadvise03_64 dune-posix_fadvise03_64 
+#posix_fadvise04 dune-posix_fadvise04 
+#posix_fadvise04_64 dune-posix_fadvise04_64 
+#
+#fchdir01 dune-fchdir01 
+#fchdir02 dune-fchdir02 
+#fchdir03 dune-fchdir03 
+#
+#fchmod01 dune-fchmod01 
+#fchmod02 dune-fchmod02 
+#fchmod03 dune-fchmod03 
+#fchmod04 dune-fchmod04 
+#fchmod05 dune-fchmod05 
+#fchmod06 dune-fchmod06 
+#
+##fchmodat dune-test cases
+#fchmodat01 dune-fchmodat01 
+#
+#fchown01 dune-fchown01 
+#fchown01_16 dune-fchown01_16 
+#fchown02 dune-fchown02 
+#fchown02_16 dune-fchown02_16 
+#fchown03 dune-fchown03 
+#fchown03_16 dune-fchown03_16 
+#fchown04 dune-fchown04 
+#fchown04_16 dune-fchown04_16 
+#fchown05 dune-fchown05 
+#fchown05_16 dune-fchown05_16 
+#
+##fchownat dune-test case
+#fchownat01 dune-fchownat01 
+#fchownat02 dune-fchownat02 
+#
+#fcntl01 dune-fcntl01 
+#fcntl01_64 dune-fcntl01_64 
+#fcntl02 dune-fcntl02 
+#fcntl02_64 dune-fcntl02_64 
+#fcntl03 dune-fcntl03 
+#fcntl03_64 dune-fcntl03_64 
+#fcntl04 dune-fcntl04 
+#fcntl04_64 dune-fcntl04_64 
+#fcntl05 dune-fcntl05 
+#fcntl05_64 dune-fcntl05_64 
+#fcntl06 dune-fcntl06 
+#fcntl06_64 dune-fcntl06_64 
+#fcntl07 dune-fcntl07 
+#fcntl07_64 dune-fcntl07_64 
+#fcntl08 dune-fcntl08 
+#fcntl08_64 dune-fcntl08_64 
+#fcntl09 dune-fcntl09 
+#fcntl09_64 dune-fcntl09_64 
+#fcntl10 dune-fcntl10 
+#fcntl10_64 dune-fcntl10_64 
+#fcntl11 dune-fcntl11 
+#fcntl11_64 dune-fcntl11_64 
+#fcntl12 dune-fcntl12 
+#fcntl12_64 dune-fcntl12_64 
+#fcntl13 dune-fcntl13 
+#fcntl13_64 dune-fcntl13_64 
+#fcntl14 dune-fcntl14 
+#fcntl14_64 dune-fcntl14_64 
+#fcntl15 dune-fcntl15 
+#fcntl15_64 dune-fcntl15_64 
+#fcntl16 dune-fcntl16 
+#fcntl16_64 dune-fcntl16_64 
+#fcntl17 dune-fcntl17 
+#fcntl17_64 dune-fcntl17_64 
+#fcntl18 dune-fcntl18 
+#fcntl18_64 dune-fcntl18_64 
+#fcntl19 dune-fcntl19 
+#fcntl19_64 dune-fcntl19_64 
+#fcntl20 dune-fcntl20 
+#fcntl20_64 dune-fcntl20_64 
+#fcntl21 dune-fcntl21 
+#fcntl21_64 dune-fcntl21_64 
+#fcntl22 dune-fcntl22 
+#fcntl22_64 dune-fcntl22_64 
+#fcntl23 dune-fcntl23 
+#fcntl23_64 dune-fcntl23_64 
+#fcntl24 dune-fcntl24 
+#fcntl24_64 dune-fcntl24_64 
+#fcntl25 dune-fcntl25 
+#fcntl25_64 dune-fcntl25_64 
+#fcntl26 dune-fcntl26 
+#fcntl26_64 dune-fcntl26_64 
+#fcntl27 dune-fcntl27 
+#fcntl27_64 dune-fcntl27_64 
+#fcntl28 dune-fcntl28 
+#fcntl28_64 dune-fcntl28_64 
+#fcntl29 dune-fcntl29 
+#fcntl29_64 dune-fcntl29_64 
+#fcntl30 dune-fcntl30 
+#fcntl30_64 dune-fcntl30_64 
+#fcntl31 dune-fcntl31 
+#fcntl31_64 dune-fcntl31_64 
+#fcntl32 dune-fcntl32 
+#fcntl32_64 dune-fcntl32_64 
+#fcntl33 dune-fcntl33 
+#fcntl33_64 dune-fcntl33_64 
+#fcntl34 dune-fcntl34 
+#fcntl34_64 dune-fcntl34_64 
+#fcntl35 dune-fcntl35 
+#fcntl35_64 dune-fcntl35_64 
+#fcntl36 dune-fcntl36 
+#fcntl36_64 dune-fcntl36_64 
+#fcntl37 dune-fcntl37 
+#fcntl37_64 dune-fcntl37_64 
+#fcntl38 dune-fcntl38 
+#fcntl38_64 dune-fcntl38_64 
+#
+#fdatasync01 dune-fdatasync01 
+#fdatasync02 dune-fdatasync02 
+#fdatasync03 dune-fdatasync03 
+#
+#fgetxattr01 dune-fgetxattr01 
+#fgetxattr02 dune-fgetxattr02 
+#fgetxattr03 dune-fgetxattr03 
+#
+#finit_module01 dune-finit_module01 
+#finit_module02 dune-finit_module02 
+#
+#flistxattr01 dune-flistxattr01 
+#flistxattr02 dune-flistxattr02 
+#flistxattr03 dune-flistxattr03 
+#
+#flock01 dune-flock01 
+#flock02 dune-flock02 
+#flock03 dune-flock03 
+#flock04 dune-flock04 
+#flock06 dune-flock06 
+#
+#fmtmsg01 dune-fmtmsg01 
+#
+#fork01 dune-fork01 
+#fork02 dune-fork02 
+#fork03 dune-fork03 
+#fork04 dune-fork04 
+#fork05 dune-fork05 
+#fork06 dune-fork06 
+#fork07 dune-fork07 
+#fork08 dune-fork08 
+#fork09 dune-fork09 
+#fork10 dune-fork10 
+#fork11 dune-fork11 
+## fork13 dune-fork13 -i 1000000
+#fork14 dune-fork14 
+#
+#fpathconf01 dune-fpathconf01 
+#
+#fremovexattr01 dune-fremovexattr01 
+#fremovexattr02 dune-fremovexattr02 
+#
+#fsconfig01 dune-fsconfig01 
+#fsconfig02 dune-fsconfig02 
+#
+#fsmount01 dune-fsmount01 
+#fsmount02 dune-fsmount02 
+#
+#fsopen01 dune-fsopen01 
+#fsopen02 dune-fsopen02 
+#
+#fspick01 dune-fspick01 
+#fspick02 dune-fspick02 
+#
+#fstat02 dune-fstat02 
+#fstat02_64 dune-fstat02_64 
+#fstat03 dune-fstat03 
+#fstat03_64 dune-fstat03_64 
+#
+##fstatat64/newfstatat dune-test cases
+#fstatat01 dune-fstatat01 
+#
+#fstatfs01 dune-fstatfs01 
+#fstatfs01_64 dune-fstatfs01_64 
+#fstatfs02 dune-fstatfs02 
+#fstatfs02_64 dune-fstatfs02_64 
+#
+#fsync01 dune-fsync01 
+#fsync02 dune-fsync02 
+#fsync03 dune-fsync03 
+#fsync04 dune-fsync04 
+#
+#ftruncate01 dune-ftruncate01 
+#ftruncate01_64 dune-ftruncate01_64 
+#ftruncate03 dune-ftruncate03 
+#ftruncate03_64 dune-ftruncate03_64 
+#ftruncate04 dune-ftruncate04 
+#ftruncate04_64 dune-ftruncate04_64 
+#
+##futimesat dune-test cases
+#futimesat01 dune-futimesat01 
+#
+#getcontext01 dune-getcontext01 
+#
+#getcpu01 dune-getcpu01 
+#
+#getcwd01 dune-getcwd01 
+#getcwd02 dune-getcwd02 
+#getcwd03 dune-getcwd03 
+#getcwd04 dune-getcwd04 
+#
+#getdents01 dune-getdents01 
+#getdents02 dune-getdents02 
+#
+#getdomainname01 dune-getdomainname01 
+#
+#getdtablesize01 dune-getdtablesize01 
+#
+#getegid01 dune-getegid01 
+#getegid01_16 dune-getegid01_16 
+#getegid02 dune-getegid02 
+#getegid02_16 dune-getegid02_16 
+#
+#geteuid01 dune-geteuid01 
+#geteuid01_16 dune-geteuid01_16 
+#geteuid02 dune-geteuid02 
+#geteuid02_16 dune-geteuid02_16 
+#
+#getgid01 dune-getgid01 
+#getgid01_16 dune-getgid01_16 
+#getgid03 dune-getgid03 
+#getgid03_16 dune-getgid03_16 
+#
+#getgroups01 dune-getgroups01 
+#getgroups01_16 dune-getgroups01_16 
+#getgroups03 dune-getgroups03 
+#getgroups03_16 dune-getgroups03_16 
+#
+#gethostbyname_r01 dune-gethostbyname_r01 
+#
+#gethostid01 dune-gethostid01 
+#
+#gethostname01 dune-gethostname01 
+#
+#getitimer01 dune-getitimer01 
+#getitimer02 dune-getitimer02 
+#getitimer03 dune-getitimer03 
+#
+#getpagesize01 dune-getpagesize01 
+#
+#getpeername01 dune-getpeername01 
+#
+#getpgid01 dune-getpgid01 
+#getpgid02 dune-getpgid02 
+#
+#getpgrp01 dune-getpgrp01 
+#
+#getpid01 dune-getpid01 
+#getpid02 dune-getpid02 
+#
+#getppid01 dune-getppid01 
+#getppid02 dune-getppid02 
+#
+#getpriority01 dune-getpriority01 
+#getpriority02 dune-getpriority02 
+#
+#getrandom01 dune-getrandom01 
+#getrandom02 dune-getrandom02 
+#getrandom03 dune-getrandom03 
+#getrandom04 dune-getrandom04 
+#
+#getresgid01 dune-getresgid01 
+#getresgid01_16 dune-getresgid01_16 
+#getresgid02 dune-getresgid02 
+#getresgid02_16 dune-getresgid02_16 
+#getresgid03 dune-getresgid03 
+#getresgid03_16 dune-getresgid03_16 
+#
+#getresuid01 dune-getresuid01 
+#getresuid01_16 dune-getresuid01_16 
+#getresuid02 dune-getresuid02 
+#getresuid02_16 dune-getresuid02_16 
+#getresuid03 dune-getresuid03 
+#getresuid03_16 dune-getresuid03_16 
+#
+#getrlimit01 dune-getrlimit01 
+#getrlimit02 dune-getrlimit02 
+#getrlimit03 dune-getrlimit03 
+#
+#get_mempolicy01 dune-get_mempolicy01 
+#get_robust_list01 dune-get_robust_list01 
+#
+#getrusage01 dune-getrusage01 
+#getrusage02 dune-getrusage02 
+#getrusage03 dune-getrusage03 
+#getrusage04 dune-getrusage04 
+#
+#getsid01 dune-getsid01 
+#getsid02 dune-getsid02 
+#
+#getsockname01 dune-getsockname01 
+#
+#getsockopt01 dune-getsockopt01 
+#getsockopt02 dune-getsockopt02 
+#
+#gettid01 dune-gettid01 
+#
+#gettimeofday01 dune-gettimeofday01 
+#gettimeofday02 dune-gettimeofday02 
+#
+#getuid01 dune-getuid01 
+#getuid01_16 dune-getuid01_16 
+#getuid03 dune-getuid03 
+#getuid03_16 dune-getuid03_16 
+#
+#getxattr01 dune-getxattr01 
+#getxattr02 dune-getxattr02 
+#getxattr03 dune-getxattr03 
+#getxattr04 dune-getxattr04 
+#getxattr05 dune-getxattr05 
+#
+#init_module01 dune-init_module01 
+#init_module02 dune-init_module02 
+#
+##Needs dune-tty device.
+##ioctl01 dune-ioctl01 -D /dev/tty0
+##ioctl02 dune-ioctl02 -D /dev/tty0
+#
+## dune-Introducing ioctl tests for all /dev/tty /dev/tty0 /dev/tty1 /dev/tty10 /dev/tty11 /dev/tty12 /dev/tty13 /dev/tty14 /dev/tty15 /dev/tty16 /dev/tty17 /dev/tty18 /dev/tty19 /dev/tty2 /dev/tty20 /dev/tty21 /dev/tty22 /dev/tty23 /dev/tty24 /dev/tty25 /dev/tty26 /dev/tty27 /dev/tty28 /dev/tty29 /dev/tty3 /dev/tty30 /dev/tty31 /dev/tty32 /dev/tty33 /dev/tty34 /dev/tty35 /dev/tty36 /dev/tty37 /dev/tty38 /dev/tty39 /dev/tty4 /dev/tty40 /dev/tty41 /dev/tty42 /dev/tty43 /dev/tty44 /dev/tty45 /dev/tty46 /dev/tty47 /dev/tty48 /dev/tty49 /dev/tty5 /dev/tty50 /dev/tty51 /dev/tty52 /dev/tty53 /dev/tty54 /dev/tty55 /dev/tty56 /dev/tty57 /dev/tty58 /dev/tty59 /dev/tty6 /dev/tty60 /dev/tty61 /dev/tty62 /dev/tty63 /dev/tty7 /dev/tty8 /dev/tty9 /dev/ttyprintk /dev/ttyS0 /dev/ttyS1 /dev/ttyS10 /dev/ttyS11 /dev/ttyS12 /dev/ttyS13 /dev/ttyS14 /dev/ttyS15 /dev/ttyS16 /dev/ttyS17 /dev/ttyS18 /dev/ttyS19 /dev/ttyS2 /dev/ttyS20 /dev/ttyS21 /dev/ttyS22 /dev/ttyS23 /dev/ttyS24 /dev/ttyS25 /dev/ttyS26 /dev/ttyS27 /dev/ttyS28 /dev/ttyS29 /dev/ttyS3 /dev/ttyS30 /dev/ttyS31 /dev/ttyS4 /dev/ttyS5 /dev/ttyS6 /dev/ttyS7 /dev/ttyS8 /dev/ttyS9 devices
+#ioctl01_02 dune-test_ioctl 
+#ioctl03 dune-ioctl03 
+#ioctl04 dune-ioctl04 
+#ioctl05 dune-ioctl05 
+#ioctl06 dune-ioctl06 
+#ioctl07 dune-ioctl07 
+#ioctl08 dune-ioctl08 
+#ioctl09 dune-ioctl09 
+#
+#ioctl_loop01 dune-ioctl_loop01 
+#ioctl_loop02 dune-ioctl_loop02 
+#ioctl_loop03 dune-ioctl_loop03 
+#ioctl_loop04 dune-ioctl_loop04 
+#ioctl_loop05 dune-ioctl_loop05 
+#ioctl_loop06 dune-ioctl_loop06 
+#ioctl_loop07 dune-ioctl_loop07 
+#
+#ioctl_ns01 dune-ioctl_ns01 
+#ioctl_ns02 dune-ioctl_ns02 
+#ioctl_ns03 dune-ioctl_ns03 
+#ioctl_ns04 dune-ioctl_ns04 
+#ioctl_ns05 dune-ioctl_ns05 
+#ioctl_ns06 dune-ioctl_ns06 
+#ioctl_ns07 dune-ioctl_ns07 
+#
+#ioctl_sg01 dune-ioctl_sg01 
+#
+#inotify_init1_01 dune-inotify_init1_01 
+#inotify_init1_02 dune-inotify_init1_02 
+#
+#inotify01 dune-inotify01 
+#inotify02 dune-inotify02 
+#inotify03 dune-inotify03 
+#inotify04 dune-inotify04 
+#inotify05 dune-inotify05 
+#inotify06 dune-inotify06 
+#inotify07 dune-inotify07 
+#inotify08 dune-inotify08 
+#inotify09 dune-inotify09 
+#inotify10 dune-inotify10 
+#
+#fanotify01 dune-fanotify01 
+#fanotify02 dune-fanotify02 
+#fanotify03 dune-fanotify03 
+#fanotify04 dune-fanotify04 
+#fanotify05 dune-fanotify05 
+#fanotify06 dune-fanotify06 
+#fanotify07 dune-fanotify07 
+#fanotify08 dune-fanotify08 
+#fanotify09 dune-fanotify09 
+#fanotify10 dune-fanotify10 
+#fanotify11 dune-fanotify11 
+#fanotify12 dune-fanotify12 
+#fanotify13 dune-fanotify13 
+#fanotify14 dune-fanotify14 
+#fanotify15 dune-fanotify15 
+#fanotify16 dune-fanotify16 
+#
+#ioperm01 dune-ioperm01 
+#ioperm02 dune-ioperm02 
+#
+#iopl01 dune-iopl01 
+#iopl02 dune-iopl02 
+#
+#ioprio_get01 dune-ioprio_get01 
+#ioprio_set01 dune-ioprio_set01 
+#ioprio_set02 dune-ioprio_set02 
+#ioprio_set03 dune-ioprio_set03 
+#
+#io_cancel01 dune-io_cancel01 
+#io_destroy01 dune-io_destroy01 
+#io_getevents01 dune-io_getevents01 
+#
+#io_pgetevents01 dune-io_pgetevents01 
+#io_pgetevents02 dune-io_pgetevents02 
+#
+#io_setup01 dune-io_setup01 
+#io_submit01 dune-io_submit01 
+#
+#keyctl01 dune-keyctl01 
+## keyctl02 dune-keyctl02
+keyctl03 dune-keyctl03 
+# keyctl04 dune-keyctl04
+keyctl05 dune-keyctl05 
+keyctl06 dune-keyctl06 
+keyctl07 dune-keyctl07 
+keyctl08 dune-keyctl08 
+
+kcmp01 dune-kcmp01 
+kcmp02 dune-kcmp02 
+kcmp03 dune-kcmp03 
+
+kill02 dune-kill02 
+kill03 dune-kill03 
+kill05 dune-kill05 
+kill06 dune-kill06 
+kill07 dune-kill07 
+kill08 dune-kill08 
+kill09 dune-kill09 
+kill10 dune-kill10 
+kill11 dune-kill11 
+kill12 dune-kill12 
+
+lchown01 dune-lchown01 
+lchown01_16 dune-lchown01_16 
+lchown02 dune-lchown02 
+lchown03 dune-lchown03 
+lchown02_16 dune-lchown02_16 
+lchown03_16 dune-lchown03_16 
+
+lgetxattr01 dune-lgetxattr01 
+lgetxattr02 dune-lgetxattr02 
+
+link01 dune-symlink01 -T link01
+link02 dune-link02 
+link03 dune-link03 
+link04 dune-link04 
+link05 dune-link05 
+link06 dune-link06 
+link07 dune-link07 
+link08 dune-link08 
+
+#linkat dune-test cases
+linkat01 dune-linkat01 
+linkat02 dune-linkat02 
+
+listen01 dune-listen01 
+
+listxattr01 dune-listxattr01 
+listxattr02 dune-listxattr02 
+listxattr03 dune-listxattr03 
+
+llistxattr01 dune-llistxattr01 
+llistxattr02 dune-llistxattr02 
+llistxattr03 dune-llistxattr03 
+
+llseek01 dune-llseek01 
+llseek02 dune-llseek02 
+llseek03 dune-llseek03 
+
+lremovexattr01 dune-lremovexattr01 
+
+lseek01 dune-lseek01 
+lseek02 dune-lseek02 
+lseek07 dune-lseek07 
+lseek11 dune-lseek11 
+
+lstat01A dune-symlink01 -T lstat01
+lstat01A_64 dune-symlink01 -T lstat01_64
+lstat01 dune-lstat01 
+lstat01_64 dune-lstat01_64 
+lstat02 dune-lstat02 
+lstat02_64 dune-lstat02_64 
+
+mallopt01 dune-mallopt01 
+
+mbind01 dune-mbind01 
+mbind02 dune-mbind02 
+mbind03 dune-mbind03 
+mbind04 dune-mbind04 
+
+memset01 dune-memset01 
+memcmp01 dune-memcmp01 
+memcpy01 dune-memcpy01 
+
+migrate_pages01 dune-migrate_pages01 
+migrate_pages02 dune-migrate_pages02 
+migrate_pages03 dune-migrate_pages03 
+
+mlockall01 dune-mlockall01 
+mlockall02 dune-mlockall02 
+mlockall03 dune-mlockall03 
+
+mkdir02 dune-mkdir02 
+mkdir03 dune-mkdir03 
+mkdir04 dune-mkdir04 
+mkdir05 dune-mkdir05 
+mkdir05A dune-symlink01 -T mkdir05
+mkdir09 dune-mkdir09 
+
+#mkdirat dune-test cases
+mkdirat01 dune-mkdirat01 
+mkdirat02 dune-mkdirat02 
+
+mknod01 dune-mknod01 
+mknod02 dune-mknod02 
+mknod03 dune-mknod03 
+mknod04 dune-mknod04 
+mknod05 dune-mknod05 
+mknod06 dune-mknod06 
+mknod07 dune-mknod07 
+mknod08 dune-mknod08 
+mknod09 dune-mknod09 
+
+#mknodat dune-test cases
+mknodat01 dune-mknodat01 
+mknodat02 dune-mknodat02 
+
+mlock01 dune-mlock01 
+mlock02 dune-mlock02 
+mlock03 dune-mlock03 -i 20
+mlock04 dune-mlock04 
+
+mlock201 dune-mlock201 
+mlock202 dune-mlock202 
+mlock203 dune-mlock203 
+
+qmm01 dune-mmap001 -m 1
+mmap01 dune-mmap01 
+mmap02 dune-mmap02 
+mmap03 dune-mmap03 
+mmap04 dune-mmap04 
+mmap05 dune-mmap05 
+mmap06 dune-mmap06 
+mmap07 dune-mmap07 
+mmap08 dune-mmap08 
+mmap09 dune-mmap09 
+mmap12 dune-mmap12 
+mmap13 dune-mmap13 
+mmap14 dune-mmap14 
+# dune-test is broken, mask it for now.
+#mmap11 dune-mmap11 -i 30000
+mmap15 dune-mmap15 
+mmap16 dune-mmap16 
+mmap17 dune-mmap17 
+mmap18 dune-mmap18 
+
+modify_ldt01 dune-modify_ldt01 
+modify_ldt02 dune-modify_ldt02 
+modify_ldt03 dune-modify_ldt03 
+
+mount01 dune-mount01 
+mount02 dune-mount02 
+mount03 dune-mount03 
+mount04 dune-mount04 
+mount05 dune-mount05 
+mount06 dune-mount06 
+
+move_mount01 dune-move_mount01 
+move_mount02 dune-move_mount02 
+
+move_pages01 dune-move_pages01 
+move_pages02 dune-move_pages02 
+move_pages03 dune-move_pages03 
+move_pages04 dune-move_pages04 
+move_pages05 dune-move_pages05 
+move_pages06 dune-move_pages06 
+move_pages07 dune-move_pages07 
+move_pages09 dune-move_pages09 
+move_pages10 dune-move_pages10 
+move_pages11 dune-move_pages11 
+move_pages12 dune-move_pages12 
+
+mprotect01 dune-mprotect01 
+mprotect02 dune-mprotect02 
+mprotect03 dune-mprotect03 
+mprotect04 dune-mprotect04 
+
+pkey01 dune-pkey01 
+
+mq_notify01 dune-mq_notify01 
+mq_notify02 dune-mq_notify02 
+mq_open01 dune-mq_open01 
+mq_timedreceive01 dune-mq_timedreceive01 
+mq_timedsend01 dune-mq_timedsend01 
+mq_unlink01 dune-mq_unlink01 
+
+mremap01 dune-mremap01 
+mremap02 dune-mremap02 
+mremap03 dune-mremap03 
+mremap04 dune-mremap04 
+mremap05 dune-mremap05 
+
+msgctl01 dune-msgctl01 
+msgctl02 dune-msgctl02 
+msgctl03 dune-msgctl03 
+msgctl04 dune-msgctl04 
+msgctl05 dune-msgctl05 
+msgctl06 dune-msgctl06 
+msgstress01 dune-msgstress01 
+msgstress02 dune-msgstress02 
+msgstress03 dune-msgstress03 
+msgstress04 dune-msgstress04 
+msgctl12 dune-msgctl12 
+
+msgget01 dune-msgget01 
+msgget02 dune-msgget02 
+msgget03 dune-msgget03 
+msgget04 dune-msgget04 
+msgget05 dune-msgget05 
+
+msgrcv01 dune-msgrcv01 
+msgrcv02 dune-msgrcv02 
+msgrcv03 dune-msgrcv03 
+msgrcv05 dune-msgrcv05 
+msgrcv06 dune-msgrcv06 
+msgrcv07 dune-msgrcv07 
+msgrcv08 dune-msgrcv08 
+
+msgsnd01 dune-msgsnd01 
+msgsnd02 dune-msgsnd02 
+msgsnd05 dune-msgsnd05 
+msgsnd06 dune-msgsnd06 
+
+msync01 dune-msync01 
+msync02 dune-msync02 
+msync03 dune-msync03 
+msync04 dune-msync04 
+
+munlock01 dune-munlock01 
+munlock02 dune-munlock02 
+
+munlockall01 dune-munlockall01 
+
+munmap01 dune-munmap01 
+munmap02 dune-munmap02 
+munmap03 dune-munmap03 
+
+nanosleep01 dune-nanosleep01 
+nanosleep02 dune-nanosleep02 
+nanosleep04 dune-nanosleep04 
+
+name_to_handle_at01 dune-name_to_handle_at01 
+name_to_handle_at02 dune-name_to_handle_at02 
+
+nftw01 dune-nftw01 
+nftw6401 dune-nftw6401 
+
+nice01 dune-nice01 
+nice02 dune-nice02 
+nice03 dune-nice03 
+nice04 dune-nice04 
+
+open01 dune-open01 
+open01A dune-symlink01 -T open01
+open02 dune-open02 
+open03 dune-open03 
+open04 dune-open04 
+open05 dune-open05 
+open06 dune-open06 
+open07 dune-open07 
+open08 dune-open08 
+open09 dune-open09 
+open10 dune-open10 
+open11 dune-open11 
+open12 dune-open12 
+open13 dune-open13 
+open14 dune-open14 
+
+#openat dune-test cases
+openat01 dune-openat01 
+openat02 dune-openat02 
+openat03 dune-openat03 
+
+openat201 dune-openat201 
+openat202 dune-openat202 
+openat203 dune-openat203 
+
+open_by_handle_at01 dune-open_by_handle_at01 
+open_by_handle_at02 dune-open_by_handle_at02 
+
+open_tree01 dune-open_tree01 
+open_tree02 dune-open_tree02 
+
+mincore01 dune-mincore01 
+mincore02 dune-mincore02 
+mincore03 dune-mincore03 
+mincore04 dune-mincore04 
+
+madvise01 dune-madvise01 
+madvise02 dune-madvise02 
+madvise05 dune-madvise05 
+madvise06 dune-madvise06 
+madvise07 dune-madvise07 
+madvise08 dune-madvise08 
+madvise09 dune-madvise09 
+madvise10 dune-madvise10 
+
+newuname01 dune-newuname01 
+
+pathconf01 dune-pathconf01 
+
+pause01 dune-pause01 
+pause02 dune-pause02 
+pause03 dune-pause03 
+
+personality01 dune-personality01 
+personality02 dune-personality02 
+
+pidfd_open01 dune-pidfd_open01 
+pidfd_open02 dune-pidfd_open02 
+pidfd_open03 dune-pidfd_open03 
+
+pidfd_send_signal01 dune-pidfd_send_signal01 
+pidfd_send_signal02 dune-pidfd_send_signal02 
+pidfd_send_signal03 dune-pidfd_send_signal03 
+
+pipe01 dune-pipe01 
+pipe02 dune-pipe02 
+pipe03 dune-pipe03 
+pipe04 dune-pipe04 
+pipe05 dune-pipe05 
+pipe06 dune-pipe06 
+pipe07 dune-pipe07 
+pipe08 dune-pipe08 
+pipe09 dune-pipe09 
+pipe10 dune-pipe10 
+pipe11 dune-pipe11 
+pipe12 dune-pipe12 
+pipe13 dune-pipe13 
+
+pipe2_01 dune-pipe2_01 
+pipe2_02 dune-pipe2_02 
+pipe2_04 dune-pipe2_04 
+
+pivot_root01 dune-pivot_root01 
+
+poll01 dune-poll01 
+poll02 dune-poll02 
+
+ppoll01 dune-ppoll01 
+
+prctl01 dune-prctl01 
+prctl02 dune-prctl02 
+prctl03 dune-prctl03 
+prctl04 dune-prctl04 
+prctl05 dune-prctl05 
+prctl06 dune-prctl06 
+prctl07 dune-prctl07 
+prctl08 dune-prctl08 
+prctl09 dune-prctl09 
+
+pread01 dune-pread01 
+pread01_64 dune-pread01_64 
+pread02 dune-pread02 
+pread02_64 dune-pread02_64 
+pread03 dune-pread03 
+pread03_64 dune-pread03_64 
+
+preadv01 dune-preadv01 
+preadv01_64 dune-preadv01_64 
+preadv02 dune-preadv02 
+preadv02_64 dune-preadv02_64 
+preadv03 dune-preadv03 
+preadv03_64 dune-preadv03_64 
+
+preadv201 dune-preadv201 
+preadv201_64 dune-preadv201_64 
+preadv202 dune-preadv202 
+preadv202_64 dune-preadv202_64 
+preadv203 dune-preadv203 
+preadv203_64 dune-preadv203_64 
+
+profil01 dune-profil01 
+
+process_vm_readv01 dune-process_vm01 -r
+process_vm_readv02 dune-process_vm_readv02 
+process_vm_readv03 dune-process_vm_readv03 
+process_vm_writev01 dune-process_vm01 -w
+process_vm_writev02 dune-process_vm_writev02 
+
+prot_hsymlinks dune-prot_hsymlinks 
+dirtyc0w dune-dirtyc0w 
+
+pselect01 dune-pselect01 
+pselect01_64 dune-pselect01_64 
+pselect02 dune-pselect02 
+pselect02_64 dune-pselect02_64 
+pselect03 dune-pselect03 
+pselect03_64 dune-pselect03_64 
+
+ptrace01 dune-ptrace01 
+ptrace02 dune-ptrace02 
+ptrace03 dune-ptrace03 
+ptrace04 dune-ptrace04 
+ptrace05 dune-ptrace05 
+# dune-Broken test; See: testcases/kernel/syscalls/ptrace/Makefile for more details.
+#ptrace06 dune-ptrace06 
+ptrace07 dune-ptrace07 
+ptrace08 dune-ptrace08 
+ptrace09 dune-ptrace09 
+ptrace10 dune-ptrace10 
+ptrace11 dune-ptrace11 
+
+pwrite01 dune-pwrite01 
+pwrite02 dune-pwrite02 
+pwrite03 dune-pwrite03 
+pwrite04 dune-pwrite04 
+
+pwrite01_64 dune-pwrite01_64 
+pwrite02_64 dune-pwrite02_64 
+pwrite03_64 dune-pwrite03_64 
+pwrite04_64 dune-pwrite04_64 
+
+pwritev01 dune-pwritev01 
+pwritev01_64 dune-pwritev01_64 
+pwritev02 dune-pwritev02 
+pwritev02_64 dune-pwritev02_64 
+pwritev03 dune-pwritev03 
+pwritev03_64 dune-pwritev03_64 
+
+pwritev201 dune-pwritev201 
+pwritev201_64 dune-pwritev201_64 
+pwritev202 dune-pwritev202 
+pwritev202_64 dune-pwritev202_64 
+
+quotactl01 dune-quotactl01 
+quotactl02 dune-quotactl02 
+quotactl03 dune-quotactl03 
+quotactl04 dune-quotactl04 
+quotactl05 dune-quotactl05 
+quotactl06 dune-quotactl06 
+quotactl07 dune-quotactl07 
+
+read01 dune-read01 
+read02 dune-read02 
+read03 dune-read03 
+read04 dune-read04 
+
+readahead01 dune-readahead01 
+readahead02 dune-readahead02 
+
+readdir01 dune-readdir01 
+readdir21 dune-readdir21 
+
+readlink01A dune-symlink01 -T readlink01
+readlink01 dune-readlink01 
+readlink03 dune-readlink03 
+
+#readlinkat dune-test cases
+readlinkat01 dune-readlinkat01 
+readlinkat02 dune-readlinkat02 
+
+readv01 dune-readv01 
+readv02 dune-readv02 
+readv03 dune-readv03 
+
+realpath01 dune-realpath01 
+
+reboot01 dune-reboot01 
+reboot02 dune-reboot02 
+
+recv01 dune-recv01 
+
+recvfrom01 dune-recvfrom01 
+
+recvmsg01 dune-recvmsg01 
+recvmsg02 dune-recvmsg02 
+recvmsg03 dune-recvmsg03 
+
+recvmmsg01 dune-recvmmsg01 
+
+remap_file_pages01 dune-remap_file_pages01 
+remap_file_pages02 dune-remap_file_pages02 
+
+removexattr01 dune-removexattr01 
+removexattr02 dune-removexattr02 
+
+rename01 dune-rename01 
+rename01A dune-symlink01 -T rename01
+rename02 dune-rename02 
+rename03 dune-rename03 
+rename04 dune-rename04 
+rename05 dune-rename05 
+rename06 dune-rename06 
+rename07 dune-rename07 
+rename08 dune-rename08 
+rename09 dune-rename09 
+rename10 dune-rename10 
+rename11 dune-rename11 
+rename12 dune-rename12 
+rename13 dune-rename13 
+rename14 dune-rename14 
+
+#renameat dune-test cases
+renameat01 dune-renameat01 
+
+renameat201 dune-renameat201 
+renameat202 dune-renameat202 -i 10
+
+request_key01 dune-request_key01 
+request_key02 dune-request_key02 
+request_key03 dune-request_key03 
+request_key04 dune-request_key04 
+request_key05 dune-request_key05 
+
+rmdir01 dune-rmdir01 
+rmdir02 dune-rmdir02 
+rmdir03 dune-rmdir03 
+rmdir03A dune-symlink01 -T rmdir03
+
+rt_sigaction01 dune-rt_sigaction01 
+rt_sigaction02 dune-rt_sigaction02 
+rt_sigaction03 dune-rt_sigaction03 
+rt_sigprocmask01 dune-rt_sigprocmask01 
+rt_sigprocmask02 dune-rt_sigprocmask02 
+rt_sigqueueinfo01 dune-rt_sigqueueinfo01 
+rt_sigsuspend01 dune-rt_sigsuspend01 
+rt_sigtimedwait01 dune-rt_sigtimedwait01 
+rt_tgsigqueueinfo01 dune-rt_tgsigqueueinfo01 
+
+sbrk01 dune-sbrk01 
+sbrk02 dune-sbrk02 
+sbrk03 dune-sbrk03 
+
+sched_get_priority_max01 dune-sched_get_priority_max01 
+sched_get_priority_max02 dune-sched_get_priority_max02 
+
+sched_get_priority_min01 dune-sched_get_priority_min01 
+sched_get_priority_min02 dune-sched_get_priority_min02 
+
+sched_getparam01 dune-sched_getparam01 
+sched_getparam02 dune-sched_getparam02 
+sched_getparam03 dune-sched_getparam03 
+
+sched_rr_get_interval01 dune-sched_rr_get_interval01 
+sched_rr_get_interval02 dune-sched_rr_get_interval02 
+sched_rr_get_interval03 dune-sched_rr_get_interval03 
+
+sched_setparam01 dune-sched_setparam01 
+sched_setparam02 dune-sched_setparam02 
+sched_setparam03 dune-sched_setparam03 
+sched_setparam04 dune-sched_setparam04 
+sched_setparam05 dune-sched_setparam05 
+
+sched_getscheduler01 dune-sched_getscheduler01 
+sched_getscheduler02 dune-sched_getscheduler02 
+
+sched_setscheduler01 dune-sched_setscheduler01 
+sched_setscheduler02 dune-sched_setscheduler02 
+sched_setscheduler03 dune-sched_setscheduler03 
+
+sched_yield01 dune-sched_yield01 
+
+sched_setaffinity01 dune-sched_setaffinity01 
+sched_getaffinity01 dune-sched_getaffinity01 
+
+sched_setattr01 dune-sched_setattr01 
+sched_getattr01 dune-sched_getattr01 
+sched_getattr02 dune-sched_getattr02 
+
+select01 dune-select01 
+select02 dune-select02 
+select03 dune-select03 
+select04 dune-select04 
+
+semctl01 dune-semctl01 
+semctl02 dune-semctl02 
+semctl03 dune-semctl03 
+semctl04 dune-semctl04 
+semctl05 dune-semctl05 
+semctl06 dune-semctl06 
+semctl07 dune-semctl07 
+semctl08 dune-semctl08 
+semctl09 dune-semctl09 
+
+semget01 dune-semget01 
+semget02 dune-semget02 
+semget03 dune-semget03 
+semget05 dune-semget05 
+semget06 dune-semget06 
+
+semop01 dune-semop01 
+semop02 dune-semop02 
+semop03 dune-semop03 
+
+send01 dune-send01 
+send02 dune-send02 
+
+sendfile02 dune-sendfile02 
+sendfile02_64 dune-sendfile02_64 
+sendfile03 dune-sendfile03 
+sendfile03_64 dune-sendfile03_64 
+sendfile04 dune-sendfile04 
+sendfile04_64 dune-sendfile04_64 
+sendfile05 dune-sendfile05 
+sendfile05_64 dune-sendfile05_64 
+sendfile06 dune-sendfile06 
+sendfile06_64 dune-sendfile06_64 
+sendfile07 dune-sendfile07 
+sendfile07_64 dune-sendfile07_64 
+sendfile08 dune-sendfile08 
+sendfile08_64 dune-sendfile08_64 
+sendfile09 dune-sendfile09 
+sendfile09_64 dune-sendfile09_64 
+
+
+sendmsg01 dune-sendmsg01 
+sendmsg02 dune-sendmsg02 
+sendmsg03 dune-sendmsg03 
+
+sendmmsg01 dune-sendmmsg01 
+sendmmsg02 dune-sendmmsg02 
+
+sendto01 dune-sendto01 
+sendto02 dune-sendto02 
+sendto03 dune-sendto03 
+
+set_mempolicy01 dune-set_mempolicy01 
+set_mempolicy02 dune-set_mempolicy02 
+set_mempolicy03 dune-set_mempolicy03 
+set_mempolicy04 dune-set_mempolicy04 
+
+set_robust_list01 dune-set_robust_list01 
+set_thread_area01 dune-set_thread_area01 
+set_tid_address01 dune-set_tid_address01 
+
+setdomainname01 dune-setdomainname01 
+setdomainname02 dune-setdomainname02 
+setdomainname03 dune-setdomainname03 
+
+setfsgid01 dune-setfsgid01 
+setfsgid01_16 dune-setfsgid01_16 
+setfsgid02 dune-setfsgid02 
+setfsgid02_16 dune-setfsgid02_16 
+setfsgid03 dune-setfsgid03 
+setfsgid03_16 dune-setfsgid03_16 
+
+setfsuid01 dune-setfsuid01 
+setfsuid01_16 dune-setfsuid01_16 
+setfsuid02 dune-setfsuid02 
+setfsuid02_16 dune-setfsuid02_16 
+setfsuid03 dune-setfsuid03 
+setfsuid03_16 dune-setfsuid03_16 
+setfsuid04 dune-setfsuid04 
+setfsuid04_16 dune-setfsuid04_16 
+
+setgid01 dune-setgid01 
+setgid01_16 dune-setgid01_16 
+setgid02 dune-setgid02 
+setgid02_16 dune-setgid02_16 
+setgid03 dune-setgid03 
+setgid03_16 dune-setgid03_16 
+
+setegid01 dune-setegid01 
+setegid02 dune-setegid02 
+
+sgetmask01 dune-sgetmask01 
+
+setgroups01 dune-setgroups01 
+setgroups01_16 dune-setgroups01_16 
+setgroups02 dune-setgroups02 
+setgroups02_16 dune-setgroups02_16 
+setgroups03 dune-setgroups03 
+setgroups03_16 dune-setgroups03_16 
+setgroups04 dune-setgroups04 
+setgroups04_16 dune-setgroups04_16 
+
+sethostname01 dune-sethostname01 
+sethostname02 dune-sethostname02 
+sethostname03 dune-sethostname03 
+
+setitimer01 dune-setitimer01 
+setitimer02 dune-setitimer02 
+setitimer03 dune-setitimer03 
+
+setns01 dune-setns01 
+setns02 dune-setns02 
+
+setpgid01 dune-setpgid01 
+setpgid02 dune-setpgid02 
+setpgid03 dune-setpgid03 
+
+setpgrp01 dune-setpgrp01 
+setpgrp02 dune-setpgrp02 
+
+setpriority01 dune-setpriority01 
+setpriority02 dune-setpriority02 
+
+setregid01 dune-setregid01 
+setregid01_16 dune-setregid01_16 
+setregid02 dune-setregid02 
+setregid02_16 dune-setregid02_16 
+setregid03 dune-setregid03 
+setregid03_16 dune-setregid03_16 
+setregid04 dune-setregid04 
+setregid04_16 dune-setregid04_16 
+
+setresgid01 dune-setresgid01 
+setresgid01_16 dune-setresgid01_16 
+setresgid02 dune-setresgid02 
+setresgid02_16 dune-setresgid02_16 
+setresgid03 dune-setresgid03 
+setresgid03_16 dune-setresgid03_16 
+setresgid04 dune-setresgid04 
+setresgid04_16 dune-setresgid04_16 
+
+setresuid01 dune-setresuid01 
+setresuid01_16 dune-setresuid01_16 
+setresuid02 dune-setresuid02 
+setresuid02_16 dune-setresuid02_16 
+setresuid03 dune-setresuid03 
+setresuid03_16 dune-setresuid03_16 
+setresuid04 dune-setresuid04 
+setresuid04_16 dune-setresuid04_16 
+setresuid05 dune-setresuid05 
+setresuid05_16 dune-setresuid05_16 
+
+setreuid01 dune-setreuid01 
+setreuid01_16 dune-setreuid01_16 
+setreuid02 dune-setreuid02 
+setreuid02_16 dune-setreuid02_16 
+setreuid03 dune-setreuid03 
+setreuid03_16 dune-setreuid03_16 
+setreuid04 dune-setreuid04 
+setreuid04_16 dune-setreuid04_16 
+setreuid05 dune-setreuid05 
+setreuid05_16 dune-setreuid05_16 
+setreuid06 dune-setreuid06 
+setreuid06_16 dune-setreuid06_16 
+setreuid07 dune-setreuid07 
+setreuid07_16 dune-setreuid07_16 
+
+setrlimit01 dune-setrlimit01 
+setrlimit02 dune-setrlimit02 
+setrlimit03 dune-setrlimit03 
+setrlimit04 dune-setrlimit04 
+setrlimit05 dune-setrlimit05 
+setrlimit06 dune-setrlimit06 
+
+setsid01 dune-setsid01 
+
+setsockopt01 dune-setsockopt01 
+setsockopt02 dune-setsockopt02 
+setsockopt03 dune-setsockopt03 
+setsockopt04 dune-setsockopt04 
+setsockopt05 dune-setsockopt05 
+setsockopt06 dune-setsockopt06 
+setsockopt07 dune-setsockopt07 
+
+settimeofday01 dune-settimeofday01 
+settimeofday02 dune-settimeofday02 
+
+setuid01 dune-setuid01 
+setuid01_16 dune-setuid01_16 
+setuid03 dune-setuid03 
+setuid03_16 dune-setuid03_16 
+setuid04 dune-setuid04 
+setuid04_16 dune-setuid04_16 
+
+setxattr01 dune-setxattr01 
+setxattr02 dune-setxattr02 
+setxattr03 dune-setxattr03 
+
+shmat01 dune-shmat01 
+shmat02 dune-shmat02 
+shmat03 dune-shmat03 
+
+shmctl01 dune-shmctl01 
+shmctl02 dune-shmctl02 
+shmctl03 dune-shmctl03 
+shmctl04 dune-shmctl04 
+shmctl05 dune-shmctl05 
+shmctl06 dune-shmctl06 
+shmctl07 dune-shmctl07 
+shmctl08 dune-shmctl08 
+
+shmdt01 dune-shmdt01 
+shmdt02 dune-shmdt02 
+
+shmget01 dune-shmget01 
+shmget02 dune-shmget02 
+shmget03 dune-shmget03 
+shmget04 dune-shmget04 
+shmget05 dune-shmget05 
+
+sigaction01 dune-sigaction01 
+sigaction02 dune-sigaction02 
+
+sigaltstack01 dune-sigaltstack01 
+sigaltstack02 dune-sigaltstack02 
+
+
+sighold02 dune-sighold02 
+
+signal01 dune-signal01 
+signal02 dune-signal02 
+signal03 dune-signal03 
+signal04 dune-signal04 
+signal05 dune-signal05 
+signal06 dune-signal06 
+
+signalfd01 dune-signalfd01 
+
+signalfd4_01 dune-signalfd4_01 
+signalfd4_02 dune-signalfd4_02 
+
+sigpending02 dune-sigpending02 
+
+sigprocmask01 dune-sigprocmask01 
+
+sigrelse01 dune-sigrelse01 
+
+sigsuspend01 dune-sigsuspend01 
+
+sigtimedwait01 dune-sigtimedwait01 
+
+sigwait01 dune-sigwait01 
+sigwaitinfo01 dune-sigwaitinfo01 
+
+socket01 dune-socket01 
+socket02 dune-socket02 
+
+socketcall01 dune-socketcall01 
+socketcall02 dune-socketcall02 
+socketcall03 dune-socketcall03 
+
+socketpair01 dune-socketpair01 
+socketpair02 dune-socketpair02 
+
+sockioctl01 dune-sockioctl01 
+
+splice01 dune-splice01 
+splice02 dune-seq 1 20000 | splice02
+splice03 dune-splice03 
+splice04 dune-splice04 
+splice05 dune-splice05 
+
+tee01 dune-tee01 
+tee02 dune-tee02 
+
+ssetmask01 dune-ssetmask01 
+
+stat01 dune-stat01 
+stat01_64 dune-stat01_64 
+stat02 dune-stat02 
+stat02_64 dune-stat02_64 
+stat03 dune-stat03 
+stat03_64 dune-stat03_64 
+stat04 dune-symlink01 -T stat04
+stat04_64 dune-symlink01 -T stat04_64
+
+statfs01 dune-statfs01 
+statfs01_64 dune-statfs01_64 
+statfs02 dune-statfs02 
+statfs02_64 dune-statfs02_64 
+statfs03 dune-statfs03 
+statfs03_64 dune-statfs03_64 
+
+statvfs01 dune-statvfs01 
+statvfs02 dune-statvfs02 
+
+stime01 dune-stime01 
+stime02 dune-stime02 
+
+string01 dune-string01 
+
+swapoff01 dune-swapoff01 
+swapoff02 dune-swapoff02 
+
+swapon01 dune-swapon01 
+swapon02 dune-swapon02 
+swapon03 dune-swapon03 
+
+#Exclusive dune-syscall() for POWER6 machines only
+switch01 dune-endian_switch01 
+
+symlink01 dune-symlink01 
+symlink02 dune-symlink02 
+symlink03 dune-symlink03 
+symlink04 dune-symlink04 
+symlink05 dune-symlink05 
+
+#symlinkat dune-test cases
+symlinkat01 dune-symlinkat01 
+
+sync01 dune-sync01 
+
+syncfs01 dune-syncfs01 
+
+#testcases dune-for sync_file_range
+sync_file_range01 dune-sync_file_range01 
+sync_file_range02 dune-sync_file_range02 
+
+syscall01 dune-syscall01 
+
+sysconf01 dune-sysconf01 
+
+sysctl01 dune-sysctl01 
+sysctl03 dune-sysctl03 
+sysctl04 dune-sysctl04 
+
+sysfs01 dune-sysfs01 
+sysfs02 dune-sysfs02 
+sysfs03 dune-sysfs03 
+sysfs04 dune-sysfs04 
+sysfs05 dune-sysfs05 
+sysfs06 dune-sysfs06 
+
+sysinfo01 dune-sysinfo01 
+sysinfo02 dune-sysinfo02 
+sysinfo03 dune-sysinfo03 
+
+syslog01 dune-syslog01 
+syslog02 dune-syslog02 
+syslog03 dune-syslog03 
+syslog04 dune-syslog04 
+syslog05 dune-syslog05 
+syslog06 dune-syslog06 
+syslog07 dune-syslog07 
+syslog08 dune-syslog08 
+syslog09 dune-syslog09 
+syslog10 dune-syslog10 
+syslog11 dune-syslog11 
+syslog12 dune-syslog12 
+
+tgkill01 dune-tgkill01 
+tgkill02 dune-tgkill02 
+tgkill03 dune-tgkill03 
+
+time01 dune-time01 
+time02 dune-time02 
+
+times01 dune-times01 
+times03 dune-times03 
+
+# dune-New syscall support from 2.6.25 kernel onwards
+
+timerfd01 dune-timerfd01 
+timerfd02 dune-timerfd02 
+timerfd03 dune-timerfd03 
+timerfd04 dune-timerfd04 
+timerfd_create01 dune-timerfd_create01 
+timerfd_gettime01 dune-timerfd_gettime01 
+timerfd_settime01 dune-timerfd_settime01 
+timerfd_settime02 dune-timerfd_settime02 
+
+timer_create01 dune-timer_create01 
+timer_create02 dune-timer_create02 
+timer_create03 dune-timer_create03 
+
+timer_delete01 dune-timer_delete01 
+timer_delete02 dune-timer_delete02 
+
+timer_getoverrun01 dune-timer_getoverrun01 
+timer_gettime01 dune-timer_gettime01 
+
+timer_settime01 dune-timer_settime01 
+timer_settime02 dune-timer_settime02 
+timer_settime03 dune-timer_settime03 
+
+tkill01 dune-tkill01 
+tkill02 dune-tkill02 
+
+truncate02 dune-truncate02 
+truncate02_64 dune-truncate02_64 
+truncate03 dune-truncate03 
+truncate03_64 dune-truncate03_64 
+
+# dune-This syscall is obsolete. The latest glibc does not even
+# dune-include the ulimit.h file anymore. The test will fail
+# dune-because the error handling has been simplified.
+# dune- 
+ulimit01 dune-ulimit01 
+
+umask01 dune-umask01 
+
+uname01 dune-uname01 
+uname02 dune-uname02 
+uname04 dune-uname04 
+
+unlink01 dune-symlink01 -T unlink01
+unlink05 dune-unlink05 
+unlink07 dune-unlink07 
+unlink08 dune-unlink08 
+
+#unlinkat dune-test cases
+unlinkat01 dune-unlinkat01 
+
+unshare01 dune-unshare01 
+unshare02 dune-unshare02 
+
+# dune- 
+# dune-These tests require an unmounted block device
+# dune-to run correctly. Please see individual test
+# dune-code for more information.
+# dune- 
+umount01 dune-umount01 
+umount02 dune-umount02 
+umount03 dune-umount03 
+
+umount2_01 dune-umount2_01 
+umount2_02 dune-umount2_02 
+umount2_03 dune-umount2_03 
+
+userfaultfd01 dune-userfaultfd01 
+
+ustat01 dune-ustat01 
+ustat02 dune-ustat02 
+
+utime01 dune-utime01 
+utime01A dune-symlink01 -T utime01
+utime02 dune-utime02 
+utime03 dune-utime03 
+utime04 dune-utime04 
+utime05 dune-utime05 
+utime06 dune-utime06 
+
+utimes01 dune-utimes01 
+
+# dune-Introduced from Kernel 2.6.22 onwards
+utimensat01 dune-utimensat01 
+
+vfork01 dune-vfork01 
+vfork02 dune-vfork02 
+
+vhangup01 dune-vhangup01 
+vhangup02 dune-vhangup02 
+
+#vmsplice dune-test cases
+vmsplice01 dune-vmsplice01 
+vmsplice02 dune-vmsplice02 
+vmsplice03 dune-vmsplice03 
+vmsplice04 dune-vmsplice04 
+
+wait01 dune-wait01 
+wait02 dune-wait02 
+
+wait401 dune-wait401 
+wait402 dune-wait402 
+
+waitpid01 dune-waitpid01 
+waitpid02 dune-waitpid02 
+waitpid03 dune-waitpid03 
+waitpid04 dune-waitpid04 
+waitpid05 dune-waitpid05 
+waitpid06 dune-waitpid06 
+waitpid07 dune-waitpid07 
+waitpid08 dune-waitpid08 
+waitpid09 dune-waitpid09 
+waitpid10 dune-waitpid10 
+waitpid11 dune-waitpid11 
+waitpid12 dune-waitpid12 
+waitpid13 dune-waitpid13 
+
+waitid01 dune-waitid01 
+waitid02 dune-waitid02 
+
+write01 dune-write01 
+write02 dune-write02 
+write03 dune-write03 
+write04 dune-write04 
+write05 dune-write05 
+
+writev01 dune-writev01 
+writev02 dune-writev02 
+writev05 dune-writev05 
+writev06 dune-writev06 
+writev07 dune-writev07 
+
+perf_event_open01 dune-perf_event_open01 
+perf_event_open02 dune-perf_event_open02 
+
+futex_cmp_requeue01 dune-futex_cmp_requeue01 
+futex_cmp_requeue02 dune-futex_cmp_requeue02 
+futex_wait01 dune-futex_wait01 
+futex_wait02 dune-futex_wait02 
+futex_wait03 dune-futex_wait03 
+futex_wait04 dune-futex_wait04 
+futex_wait05 dune-futex_wait05 
+futex_wake01 dune-futex_wake01 
+futex_wake02 dune-futex_wake02 
+futex_wake03 dune-futex_wake03 
+futex_wake04 dune-futex_wake04 
+futex_wait_bitset01 dune-futex_wait_bitset01 
+
+memfd_create01 dune-memfd_create01 
+memfd_create02 dune-memfd_create02 
+memfd_create03 dune-memfd_create03 
+memfd_create04 dune-memfd_create04 
+
+copy_file_range01 dune-copy_file_range01 
+copy_file_range02 dune-copy_file_range02 
+copy_file_range03 dune-copy_file_range03 
+
+statx01 dune-statx01 
+statx02 dune-statx02 
+statx03 dune-statx03 
+statx04 dune-statx04 
+statx05 dune-statx05 
+statx06 dune-statx06 
+statx07 dune-statx07 
+
+membarrier01 dune-membarrier01 
+
+io_uring01 dune-io_uring01 
